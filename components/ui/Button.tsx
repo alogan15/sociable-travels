@@ -1,28 +1,34 @@
-interface ButtonProps {
+import Link from "next/link";
+import clsx from "clsx";
+
+type ButtonProps = {
   children: React.ReactNode;
   href?: string;
-}
+  variant?: "primary" | "secondary";
+};
 
 export default function Button({
   children,
   href,
+  variant = "primary",
 }: ButtonProps) {
+  const classes = clsx(
+    "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300",
+    {
+      "bg-[var(--primary)] text-white hover:opacity-90":
+        variant === "primary",
+      "border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white":
+        variant === "secondary",
+    }
+  );
+
   if (href) {
     return (
-      <a
-        href={href}
-        className="inline-flex items-center rounded-full bg-[#0B3C5D] px-6 py-3 font-medium text-white transition hover:opacity-90"
-      >
+      <Link href={href} className={classes}>
         {children}
-      </a>
+      </Link>
     );
   }
 
-  return (
-    <button
-      className="rounded-full bg-[#0B3C5D] px-6 py-3 font-medium text-white transition hover:opacity-90"
-    >
-      {children}
-    </button>
-  );
+  return <button className={classes}>{children}</button>;
 }
