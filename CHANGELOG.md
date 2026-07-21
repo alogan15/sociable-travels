@@ -23,3 +23,18 @@
 ## Version 1.0.0
 
 - Initial client launch
+
+## v0.5.0
+
+### Added
+- Completed Destinations section
+- Completed How It Works section
+- Created reusable StepCard component
+- Created reusable SectionHeader component
+- Added centralized font management
+
+### Updated
+- Updated site branding to match client feedback
+- Integrated new logo
+- Updated primary color palette
+- Refined hero typography
