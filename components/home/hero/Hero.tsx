@@ -1,4 +1,5 @@
-import Container from "../layout/Container";
+import Container from "../../layout/Container";
+import HeroContent from "./HeroContent";
 
 export default function Hero() {
   return (
@@ -17,7 +18,9 @@ export default function Hero() {
       {/* Content Container */}
       <Container>
         <div className="relative z-10 flex h-screen items-center">
-          {/* Hero content goes here in Commit 2 */}
+          {<div className="relative z-10 flex h-screen items-center">
+        <HeroContent />
+        </div>}
         </div>
       </Container>
     </section>

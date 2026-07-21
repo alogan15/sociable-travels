@@ -16,6 +16,16 @@ Things we've identified but haven't started.
 
 ---
 
+## 🔄 Technical Debt / Backlog
+
+- [ ] Update Hero height to `min-h-[calc(100vh-88px)]` after navbar height is finalized.
+- [ ] Replace placeholder hero image with final `hero-bg.jpg`.
+- [ ] Replace text logo with official Sociable Travels logo.
+- [ ] Replace placeholder copy with final approved copy.
+- [ ] Hero responsive polish.
+
+---
+
 ## 🚧 In Progress
 
 - [ ] Homepage MVP

@@ -1,12 +1,18 @@
 export const hero = {
   eyebrow: "Dream It. Plan It. Experience It.",
 
-  heading: "Discover Your Next Adventure",
+  heading: "Your Dream Vacation Starts Here",
 
   description:
-    "From tropical getaways to unforgettable group trips, we'll help you create memories that last a lifetime.",
+    "From tropical getaways to unforgettable group trips, Sociable Travels creates personalized travel experiences designed around you.",
 
-  primaryButton: "Plan My Trip",
+  primaryButton: {
+    text: "Plan My Trip",
+    href: "/contact",
+  },
 
-  secondaryButton: "Explore Destinations",
+  secondaryButton: {
+    text: "Read Reviews",
+    href: "/reviews",
+  },
 };
