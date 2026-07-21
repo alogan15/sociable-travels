@@ -70,14 +70,23 @@ Current Section:
 - [x] Hero MVP complete
 
 
-## Sprint 3 - Homepage Layout
 
-### Next Up
+## Sprint 3 — Hero MVP / Homepage Layout
 
-- [ ] Build Version B Hero concept
-- [ ] Present Version A & Version B to client
-- [ ] Build "How It Works" section
-- [ ] Build Destinations section
+Status: ✅ Complete
+
+- [x] Hero layout
+- [x] Hero content
+- [x] Hero buttons
+- [x] Hero responsiveness
+- [x] Trust bar
+- [x] Hero image selected
+- [x] Ready for client preview
+- [x] Build Version B Hero concept
+- [x] Present Version A & Version B to client
+- [x] Build "How It Works" section
+- [x] Build Destinations section
+
 
 ## Homepage MVP
 
