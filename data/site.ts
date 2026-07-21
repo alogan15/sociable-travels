@@ -1,14 +1,19 @@
 export const site = {
   name: "Sociable Travels",
 
-  slogan: "Discover Your Next Adventure",
+  tagline: "Discover Your Next Adventure",
 
   description:
-    "Personalized travel experiences designed to create unforgettable memories.",
+    "From tropical getaways to unforgettable group trips, we'll help you create memories that last a lifetime.",
 
-  cta: {
-    primary: "Book Your Trip",
-    secondary: "Explore Destinations",
+  primaryButton: {
+    text: "Plan My Trip",
+    href: "/contact",
+  },
+
+  secondaryButton: {
+    text: "Explore Destinations",
+    href: "/services",
   },
 
   contact: {
@@ -16,14 +21,9 @@ export const site = {
     email: "",
   },
 
-  socials: {
+  social: {
     facebook: "",
     instagram: "",
     tiktok: "",
-  },
-
-  company: {
-    designer: "From London to Paris LLC",
-    website: "https://fromlondontoparis.com",
   },
 };
