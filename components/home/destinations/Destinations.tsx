@@ -1,3 +1,4 @@
+import DestinationCard from "./DestinationCard";
 import { destinations } from "@/data/destinations";
 
 export default function Destinations() {
@@ -19,7 +20,14 @@ export default function Destinations() {
           </p>
         </div>
 
-        {/* Cards go here */}
+        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+          {destinations.map((destination) => (
+            <DestinationCard
+              key={destination.name}
+              destination={destination}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
