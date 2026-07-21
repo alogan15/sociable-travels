@@ -121,6 +121,41 @@ Current Section:
 
 ---
 
+# 🎨 UI Polish Backlog
+
+These improvements are intentionally deferred until after the MVP is complete.
+
+## Hero
+
+- [ ] Change hero height to `min-h-[calc(100vh-88px)]` once the navbar height is finalized.
+- [ ] Float the Hero Trust Bar over the next section using a negative margin (`-mb-20` or similar) after the "How It Works" section is built.
+- [ ] Add subtle scroll indicator.
+- [ ] Fine-tune typography spacing.
+- [ ] Replace placeholder hero copy with final approved copy.
+- [ ] Replace placeholder hero image with final licensed image.
+- [ ] Add responsive spacing refinements.
+
+## Navigation
+
+- [ ] Transparent navbar on top of the hero.
+- [ ] Navbar changes to solid background on scroll.
+- [ ] Active page indicator.
+- [ ] Mobile navigation animations.
+
+## Homepage
+
+- [ ] Section reveal animations.
+- [ ] Hover animations on cards.
+- [ ] Smooth scrolling.
+- [ ] Loading animations.
+- [ ] Final spacing pass across all sections.
+
+## Footer
+
+- [ ] Add subtle background image.
+- [ ] Improve social icon hover states.
+- [ ] Final responsive polish.
+
 ## Milestone 2
 
 ⬜ Homepage Complete

@@ -1,5 +1,6 @@
 import { hero } from "@/data/hero";
 import HeroButtons from "./HeroButtons";
+import HeroTrustBar from "./HeroTrustBar";
 
 export default function HeroContent() {
   return (
@@ -17,6 +18,9 @@ export default function HeroContent() {
       </p>
 
       <HeroButtons />
+
+      <HeroTrustBar />
+      
     </div>
   );
 }
