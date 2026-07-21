@@ -52,6 +52,33 @@ Current Section:
 - [x] Navbar Component
 - [x] Footer Component
 
+
+## Sprint 2 - Hero Rebuild
+
+### Completed ✅
+
+- [x] Reorganized Hero into its own component folder
+- [x] Created HeroContent component
+- [x] Created HeroButtons component
+- [x] Created HeroTrustBar component
+- [x] Added `hero.ts` data file
+- [x] Replaced placeholder hero image
+- [x] Built responsive Hero
+- [x] Tested desktop layout
+- [x] Tested mobile layout
+- [x] Created UI Polish Backlog
+- [x] Hero MVP complete
+
+
+## Sprint 3 - Homepage Layout
+
+### Next Up
+
+- [ ] Build Version B Hero concept
+- [ ] Present Version A & Version B to client
+- [ ] Build "How It Works" section
+- [ ] Build Destinations section
+
 ## Homepage MVP
 
 ### Navigation

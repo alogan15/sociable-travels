@@ -17,7 +17,7 @@ export default function Hero() {
 
       {/* Content Container */}
       <Container>
-        <div className="relative z-10 flex h-screen items-center">
+        <div className="relative z-10 flex h-screen items-center pt-8 lg:pt-12">
           {<div className="relative z-10 flex h-screen items-center">
         <HeroContent />
         </div>}
