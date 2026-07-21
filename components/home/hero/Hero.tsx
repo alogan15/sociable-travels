@@ -1,10 +1,11 @@
 import Container from "../../layout/Container";
 import HeroContent from "./HeroContent";
+import HeroTrustBar from "./HeroTrustBar";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden">
-      {/* Background Image */}
+    <section className="relative min-h-screen overflow-hidden">
+        {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -17,8 +18,8 @@ export default function Hero() {
 
       {/* Content Container */}
       <Container>
-        <div className="relative z-10 flex h-screen items-center pt-8 lg:pt-12">
-          {<div className="relative z-10 flex h-screen items-center">
+        <div className="relative z-10 flex min-h-screen items-center py-12 lg:py-16">
+            {<div className="relative z-10 flex items-center">
         <HeroContent />
         </div>}
         </div>

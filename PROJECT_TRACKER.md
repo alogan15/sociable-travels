@@ -13,6 +13,9 @@ Things we've identified but haven't started.
 - [ ] Dashboard
 - [ ] SEO
 - [ ] Deployment
+## UI Framework Improvements
+
+- [ ] Replace icon strings (e.g. "Plane") with actual Lucide React icon components or icon references to simplify rendering and improve type safety.
 
 ---
 
@@ -23,6 +26,9 @@ Things we've identified but haven't started.
 - [ ] Replace text logo with official Sociable Travels logo.
 - [ ] Replace placeholder copy with final approved copy.
 - [ ] Hero responsive polish.
+- [ ] Make Hero Trust Bar overlap the next section using a negative bottom margin
+- [ ] Fine-tune Hero height on mobile
+- [ ] Adjust Hero spacing after all homepage sections are complete
 
 ---
 
