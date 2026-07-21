@@ -4,10 +4,11 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  --primary: #0b3c5d;
-  --secondary: #d4af37;
+  /* Brand Colors */
+  --primary: #F54284;      /* Pink */
+  --secondary: #39D5E8;    /* Aqua Blue */
 
-  --light: #f8fafc;
+  --light: #FFF8FC;        /* Soft pink background */
   --gray: #6b7280;
 }
 

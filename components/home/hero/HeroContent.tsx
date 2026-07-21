@@ -1,13 +1,16 @@
 import { hero } from "@/data/hero";
 import HeroButtons from "./HeroButtons";
 import HeroTrustBar from "./HeroTrustBar";
+import { kaushan } from "@/lib/fonts";
 
 export default function HeroContent() {
   return (
     <div className="max-w-3xl text-white">
-      <p className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-[#D4A64A]">
-        {hero.eyebrow}
-      </p>
+<p
+  className={`${kaushan.className} mb-6 text-2xl md:text-3xl text-[var(--primary)]`}
+>
+  {hero.eyebrow}
+</p>
 
       <h1 className="mb-8 text-6xl font-bold leading-tight lg:text-7xl">
         {hero.heading}

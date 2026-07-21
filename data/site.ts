@@ -17,13 +17,13 @@ export const site = {
   },
 
   contact: {
-    phone: "",
-    email: "",
+    phone: "(555) 123-4567",
+    email: "info@sociabletravels.com",
   },
 
   social: {
-    facebook: "",
-    instagram: "",
-    tiktok: "",
+    facebook: "https://facebook.com/sociabletravels",
+    instagram: "https://instagram.com/sociabletravels",
+    tiktok: "https://tiktok.com/@sociabletravels",
   },
 };

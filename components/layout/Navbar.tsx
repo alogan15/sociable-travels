@@ -4,6 +4,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Button from "../ui/Button";
 import Container from "./Container";
+import Image from "next/image";
 
 const links = [
   { name: "Home", href: "/" },

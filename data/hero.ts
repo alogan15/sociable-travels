@@ -7,7 +7,7 @@ export const hero = {
     "From tropical getaways to unforgettable group trips, Sociable Travels creates personalized travel experiences designed around you.",
 
   primaryButton: {
-    text: "Plan My Trip",
+    text: "Plan My Trip →",
     href: "/contact",
   },
 

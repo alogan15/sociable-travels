@@ -1,13 +1,15 @@
 import Container from "./Container";
+import { kaushan } from "@/lib/fonts";
 
 export default function Footer() {
   return (
     <footer className="border-t bg-slate-50 py-12">
       <Container>
         <div className="text-center">
-          <h3 className="text-xl font-semibold">
-            Sociable Travels
-          </h3>
+<h3 className={`${kaushan.className} text-4xl`}>
+  <span className="text-[var(--primary)]">Sociable</span>{" "}
+  <span className="text-[var(--secondary)]">Travels</span>
+</h3>
 
           <p className="mt-2 text-gray-500">
             Creating unforgettable travel experiences.

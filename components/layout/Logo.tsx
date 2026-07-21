@@ -1,11 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="flex items-center">
-      <span className="text-2xl font-bold tracking-tight text-[#0B3C5D]">
-        Sociable Travels
-      </span>
+    <Link href="/">
+      <Image
+        src="/images/logo/sociable-logo2.png"
+        alt="Sociable Travels"
+        width={180}
+        height={180}
+        priority
+        className="h-20 w-auto md:h-28"
+      />
     </Link>
   );
 }
