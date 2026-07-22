@@ -1,40 +1,89 @@
 # Changelog
 
-## Version 0.1.0
-
-- Initial project setup
-
-## Version 0.2.0
-
-- Added responsive navigation
-
-## Version 0.3.0
-
-- Built homepage hero
-
-## Version 0.4.0
-
-- Added destination cards
-
-## Version 0.5.0
-
-- Connected booking form
-
-## Version 1.0.0
-
-- Initial client launch
-
-## v0.5.0
+## v0.1.0 — Project Initialization
 
 ### Added
-- Completed Destinations section
-- Completed How It Works section
-- Created reusable StepCard component
-- Created reusable SectionHeader component
-- Added centralized font management
+- Initialized Next.js project
+- Configured Tailwind CSS
+- Created GitHub repository
+- Established project folder structure
+
+---
+
+## v0.2.0 — Foundation & Navigation
+
+### Added
+- Responsive navigation
+- Footer component
+- Reusable Button component
+- Container layout component
+
+---
+
+## v0.3.0 — Hero Section
+
+### Added
+- Responsive Hero section
+- Hero content and CTA buttons
+- Hero background image
+- Hero Trust Bar
+- Hero data configuration
 
 ### Updated
-- Updated site branding to match client feedback
-- Integrated new logo
-- Updated primary color palette
-- Refined hero typography
+- Improved Hero responsiveness
+- Refined Hero layout
+
+---
+
+## v0.4.0 — Homepage Expansion
+
+### Added
+- Destinations section
+- DestinationCard component
+- How It Works section
+- StepCard component
+- Reusable SectionHeader component
+- Centralized font management
+
+### Updated
+- Homepage layout structure
+- Section spacing
+- Component organization
+
+---
+
+## v0.5.0 — Branding & Trust
+
+### Added
+- Testimonials section
+- TestimonialCard component
+- Why Choose Us section
+- FeatureCard component
+
+### Updated
+- Client-approved branding refresh
+- New logo integration
+- Bright color palette
+- Global CSS theme variables
+- Hero typography
+- Homepage visual consistency
+
+---
+
+## Upcoming
+
+### v0.6.0
+- CTA / Newsletter section
+- Footer polish
+- Mobile navigation
+- Responsive refinements
+
+### v0.7.0
+- Booking form
+- Contact form integration
+- SEO improvements
+
+### v1.0.0
+- Client approval
+- Production deployment
+- Initial public launch

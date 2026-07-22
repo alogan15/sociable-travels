@@ -1,233 +1,191 @@
+# 🌴 Sociable Travels
+# Project Tracker
 
- # Sociable Travels 
- # Project Tracker
- # Client: Sociable Travels
- # Developer: From London to Paris LLC
- # Status: 🟢 In Development
-
-## 📋 Backlog
-Things we've identified but haven't started.
-
-- [ ] Gallery
-- [ ] Newsletter
-- [ ] Dashboard
-- [ ] SEO
-- [ ] Deployment
-## UI Framework Improvements
-
-- [ ] Replace icon strings (e.g. "Plane") with actual Lucide React icon components or icon references to simplify rendering and improve type safety.
+**Client:** Sociable Travels  
+**Developer:** From London to Paris LLC  
+**Status:** 🟢 Homepage MVP In Development
 
 ---
 
-## 🔄 Technical Debt / Backlog
+# 🚧 In Progress
 
-- [ ] Update Hero height to `min-h-[calc(100vh-88px)]` after navbar height is finalized.
-- [ ] Replace placeholder hero image with final `hero-bg.jpg`.
-- [ ] Replace text logo with official Sociable Travels logo.
-- [ ] Replace placeholder copy with final approved copy.
-- [ ] Hero responsive polish.
-- [ ] Make Hero Trust Bar overlap the next section using a negative bottom margin
-- [ ] Fine-tune Hero height on mobile
-- [ ] Adjust Hero spacing after all homepage sections are complete
+## Homepage MVP
 
----
-
-## 🚧 In Progress
-
-- [ ] Homepage MVP
-
-Current Section:
-- [ ] Hero
+- [x] Hero
+- [x] Destinations
+- [x] How It Works
+- [x] Testimonials
+- [x] Why Choose Us
+- [ ] CTA / Newsletter
+- [ ] Footer Polish
+- [ ] Mobile Navigation
+- [ ] Homepage Responsive Pass
 
 ---
 
-## 👀 Ready for Client Review
+# 👀 Ready for Client Review
 
-- [ ] Homepage
+- [ ] Homepage (after CTA & Footer)
 - [ ] Booking Form
 - [ ] Dashboard
 
 ---
 
-## ✅ Completed
+# 📋 Backlog
 
-- [x] Project Setup
-- [x] GitHub Repository
-- [x] Folder Structure
-- [x] Button Component
-- [x] Navbar Component
-- [x] Footer Component
+## Features
 
+- [ ] Gallery / Vacation Types section (client decision)
+- [ ] Booking Form
+- [ ] Dashboard
+- [ ] SEO
+- [ ] Deployment
+- [ ] Analytics
+- [ ] Contact Form Integration
 
-## Sprint 2 - Hero Rebuild
+---
 
-### Completed ✅
+## UI Framework Improvements
 
-- [x] Reorganized Hero into its own component folder
-- [x] Created HeroContent component
-- [x] Created HeroButtons component
-- [x] Created HeroTrustBar component
-- [x] Added `hero.ts` data file
-- [x] Replaced placeholder hero image
-- [x] Built responsive Hero
-- [x] Tested desktop layout
-- [x] Tested mobile layout
-- [x] Created UI Polish Backlog
-- [x] Hero MVP complete
+- [ ] Convert remaining data files to use Lucide icon components instead of icon strings where applicable.
+- [ ] Create reusable card animation component.
+- [ ] Create reusable section spacing utility.
 
+---
 
+# 🔄 Technical Debt / Polish Backlog
 
-## Sprint 3 — Hero MVP / Homepage Layout
+## Hero
 
-Status: ✅ Complete
+- [ ] Decide between Hero Trust Bar vs. Why Choose Us section (client review)
+- [ ] Fine-tune Hero height on mobile
+- [ ] Update Hero height to `min-h-[calc(100vh-88px)]` after navbar height is finalized
+- [ ] Final spacing adjustments
+- [ ] Typography polish
+- [ ] Optional scroll indicator
+
+## Homepage
+
+- [ ] Final responsive pass
+- [ ] Consistent vertical spacing between sections
+- [ ] Hover animation polish
+- [ ] Scroll reveal animations
+- [ ] Smooth scrolling
+- [ ] Loading animations
+
+## Navigation
+
+- [ ] Transparent navbar over Hero
+- [ ] Solid navbar on scroll
+- [ ] Active page indicator
+- [ ] Mobile menu animations
+
+## Footer
+
+- [ ] Background treatment
+- [ ] Social icon hover states
+- [ ] Final responsive polish
+
+---
+
+# ✅ Completed
+
+## Project Setup
+
+- [x] Project initialized
+- [x] GitHub repository
+- [x] Folder structure
+- [x] Next.js configured
+- [x] Tailwind configured
+
+---
+
+## Shared Components
+
+- [x] Button
+- [x] SectionHeader
+- [x] Footer
+- [x] Container component
+
+---
+
+## Branding
+
+- [x] Client-approved color palette
+- [x] Updated logo
+- [x] Google font integration
+- [x] Global CSS variables
+- [x] Branding refresh based on client feedback
+
+---
+
+## Homepage Sections
+
+### Navigation
+
+- [x] Navbar
+- [x] Logo integration
+
+### Hero
 
 - [x] Hero layout
 - [x] Hero content
 - [x] Hero buttons
 - [x] Hero responsiveness
-- [x] Trust bar
-- [x] Hero image selected
-- [x] Ready for client preview
-- [x] Build Version B Hero concept
-- [x] Present Version A & Version B to client
-- [x] Build "How It Works" section
-- [x] Build Destinations section
-
-
-## Homepage MVP
-
-### Navigation
-
-- [x] Navbar
-- [x] Logo
-- [ ] Mobile Menu
-
----
-
-### Hero
-
-- [ ] Layout
-- [ ] Buttons
-- [ ] Hero Image
-- [ ] Responsive
-- [ ] Final Polish
-
----
-
-### Why Choose Us
-
-- [ ] Icons
-- [ ] Cards
-- [ ] Responsive
-
----
+- [x] Hero background
+- [x] Hero Trust Bar
+- [x] Client approval
 
 ### Destinations
 
-- [ ] Card Component
-- [ ] Destination Images
-- [ ] Responsive
+- [x] DestinationCard component
+- [x] Destinations section
+- [x] Destination images
+- [x] Responsive layout
 
----
+### How It Works
 
-### Services
-
-- [ ] Cards
-- [ ] Icons
-
----
+- [x] StepCard component
+- [x] Section completed
 
 ### Testimonials
 
-- [ ] Layout
-- [ ] Cards
+- [x] TestimonialCard component
+- [x] Testimonials section
+
+### Why Choose Us
+
+- [x] FeatureCard component
+- [x] Why Choose Us section
 
 ---
 
-### CTA
-
-- [ ] Layout
-- [ ] Button
-
----
-
-### Footer
-
-- [x] Basic Footer
-- [ ] Final Footer
-
+# 📍 Milestones
 
 ## Milestone 1
 
-✅ Project Initialized
-
----
-
-# 🎨 UI Polish Backlog
-
-These improvements are intentionally deferred until after the MVP is complete.
-
-## Hero
-
-- [ ] Change hero height to `min-h-[calc(100vh-88px)]` once the navbar height is finalized.
-- [ ] Float the Hero Trust Bar over the next section using a negative margin (`-mb-20` or similar) after the "How It Works" section is built.
-- [ ] Add subtle scroll indicator.
-- [ ] Fine-tune typography spacing.
-- [ ] Replace placeholder hero copy with final approved copy.
-- [ ] Replace placeholder hero image with final licensed image.
-- [ ] Add responsive spacing refinements.
-
-## Navigation
-
-- [ ] Transparent navbar on top of the hero.
-- [ ] Navbar changes to solid background on scroll.
-- [ ] Active page indicator.
-- [ ] Mobile navigation animations.
-
-## Homepage
-
-- [ ] Section reveal animations.
-- [ ] Hover animations on cards.
-- [ ] Smooth scrolling.
-- [ ] Loading animations.
-- [ ] Final spacing pass across all sections.
-
-## Footer
-
-- [ ] Add subtle background image.
-- [ ] Improve social icon hover states.
-- [ ] Final responsive polish.
+- [x] Project Initialized
 
 ## Milestone 2
 
-⬜ Homepage Complete
-
----
+- [ ] Homepage Complete
 
 ## Milestone 3
 
-⬜ Client Approval
-
----
+- [ ] Client Homepage Approval
 
 ## Milestone 4
 
-⬜ Supabase Connected
-
----
+- [ ] Supabase Connected
 
 ## Milestone 5
 
-⬜ Dashboard Complete
-
----
+- [ ] Dashboard Complete
 
 ## Milestone 6
 
-⬜ Launch
-
----
+- [ ] Production Deployment
 
 ## Milestone 7
 
-⬜ Client Handoff
+- [ ] Client Handoff
