@@ -4,23 +4,27 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Button from "../ui/Button";
 import Container from "./Container";
-import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
 const links = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "Destinations", href: "/destinations" },
   { name: "Services", href: "/services" },
-  { name: "Gallery", href: "/gallery" },
   { name: "Reviews", href: "/reviews" },
-  { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
+];
+
+const moreLinks = [
+  { name: "About", href: "/about" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "FAQ", href: "/faq" },
 ];
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <Container>
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-20 lg:h-24 items-center justify-between">
           <Logo />
 
           <nav className="hidden items-center gap-8 lg:flex">
@@ -33,6 +37,24 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+            <div className="group relative">
+            <button className="flex items-center gap-1 font-medium transition hover:text-[var(--primary)]">
+              More
+              <ChevronDown className="h-4 w-4" />
+            </button>
+
+            <div className="absolute right-0 mt-2 hidden w-48 rounded-2xl border border-slate-200 bg-white p-2 shadow-xl group-hover:block">
+              {moreLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="block rounded-lg px-4 py-2 transition hover:bg-slate-100"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
           </nav>
 
           <div className="hidden lg:block">
