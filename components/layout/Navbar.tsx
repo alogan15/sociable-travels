@@ -5,6 +5,9 @@ import Logo from "./Logo";
 import Button from "../ui/Button";
 import Container from "./Container";
 import { ChevronDown } from "lucide-react";
+import { Menu } from "lucide-react";
+import { useState } from "react";
+import MobileMenu from "./MobileMenu";
 
 const links = [
   { name: "Home", href: "/" },
@@ -21,6 +24,9 @@ const moreLinks = [
 ];
 
 export default function Navbar() {
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <Container>
@@ -57,13 +63,38 @@ export default function Navbar() {
           </div>
           </nav>
 
+          {/* Desktop CTA */}
           <div className="hidden lg:block">
-            <Button href="/contact">
-              Book Your Trip
-            </Button>
+        <button
+  onClick={() => {
+    console.log("clicked");
+    setMobileOpen(true);
+  }}
+  aria-label="Open menu"
+  className="rounded-lg p-2 hover:bg-slate-100"
+>
+  <Menu className="h-7 w-7" />
+</button>
+          </div>
+
+          {/* Mobile Hamburger */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setMobileOpen(true)}
+              aria-label="Open menu"
+              className="rounded-lg p-2 transition hover:bg-slate-100"
+            >
+              <Menu className="h-7 w-7 text-slate-800" />
+            </button>
           </div>
         </div>
       </Container>
-    </header>
+
+      <MobileMenu
+        open={mobileOpen}
+        onClose={() => setMobileOpen(false)}
+      />
+
+      </header>
   );
 }

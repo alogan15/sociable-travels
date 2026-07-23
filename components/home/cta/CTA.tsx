@@ -5,9 +5,9 @@ export default function CTA() {
   return (
     <section className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] py-24">
       <div className="mx-auto flex max-w-4xl flex-col items-center px-6 text-center">
-        <span className="mb-4 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-white">
+        {/* <span className="mb-4 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-white">
           Let's Start Planning
-        </span>
+        </span> */}
 
         <h2 className="max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl">
           Ready to Plan Your Next Adventure?
