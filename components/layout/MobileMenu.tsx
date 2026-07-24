@@ -1,8 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { X } from "lucide-react";
-import Button from "../ui/Button";
+import {
+  X,
+  House,
+  MapPinned,
+  BriefcaseBusiness,
+  Star,
+  Mail,
+  User,
+  ImageIcon,
+  CircleHelp,
+  Plane,
+} from "lucide-react";import Button from "../ui/Button";
 import { useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -14,17 +24,17 @@ type MobileMenuProps = {
 };
 
 const links = [
-  { name: "Home", href: "/" },
-  { name: "Destinations", href: "/destinations" },
-  { name: "Services", href: "/services" },
-  { name: "Reviews", href: "/reviews" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "/", icon: House },
+  { name: "Destinations", href: "/destinations", icon: MapPinned },
+  { name: "Services", href: "/services", icon: BriefcaseBusiness },
+  { name: "Reviews", href: "/reviews", icon: Star },
+  { name: "Contact", href: "/contact", icon: Mail },
 ];
 
 const moreLinks = [
-  { name: "About", href: "/about" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "FAQ", href: "/faq" },
+  { name: "About", href: "/about", icon: User },
+  { name: "Gallery", href: "/gallery", icon: ImageIcon },
+  { name: "FAQ", href: "/faq", icon: CircleHelp },
 ];
 
 export default function MobileMenu({
@@ -62,27 +72,36 @@ export default function MobileMenu({
 
       {/* Drawer */}
       <aside
-        className={`fixed right-0 top-0 z-50 flex h-screen w-72 flex-col bg-[#0B1B35] shadow-2xl transition-transform duration-300 ${
+        className={`fixed right-0 top-0 z-50 flex h-screen w-72 flex-col bg-white shadow-2xl transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Header */}
-<div className="border-b border-white/10 px-6 py-8 text-center">
+<div className="relative border-b border-[#F54284]/20 px-8 py-8">
+
+  <button
+    onClick={onClose}
+    className="absolute right-6 top-6 text-[#F54284]"
+  >
+    <X className="h-8 w-8" />
+  </button>
+
   <Image
     src="/images/logo/sociable-logo2.png"
     alt="Sociable Travels"
-    width={150}
-    height={70}
+    width={175}
+    height={85}
     className="mx-auto object-contain"
   />
 
-  <p className="mt-4 text-sm font-medium tracking-wide text-slate-300">
+  <p className="mt-5 text-center text-lg font-medium text-[#39D5E8]">
     Dream It. Plan It.
   </p>
 
-  <p className="text-sm font-medium tracking-wide text-slate-300">
+  <p className="text-center text-lg font-medium text-[#F54284]">
     Experience It.
   </p>
+
 </div>
 
           {/* <button
@@ -95,68 +114,72 @@ export default function MobileMenu({
 
         {/* Main Links */}
           <nav className="flex flex-1 flex-col overflow-y-auto p-6">
-            <div className="space-y-2">
-            {links.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={onClose}
-className="
-block
-rounded-xl
-px-4
-py-3
-text-xl
-font-semibold
-text-white
-transition-all
-duration-200
-hover:bg-white/10
-hover:text-[#F54284]
-"              >
-                {link.name}
-              </Link>
-            ))}
+            <div className="space-y-1">
+  {links.map((link) => {
+    const Icon = link.icon;
+    const active = pathname === link.href;
 
+    return (
+      <Link
+        key={link.name}
+        href={link.href}
+        onClick={onClose}
+        className={`flex items-center gap-5 rounded-xl px-5 py-4 transition ${
+          active
+            ? "bg-[#F54284]/10"
+            : "hover:bg-slate-100"
+        }`}
+      >
+        <Icon
+          className={`h-7 w-7 ${
+            active
+              ? "text-[#39D5E8]"
+              : "text-[#F54284]"
+          }`}
+        />
 
-          </div>
+        <span className="text-2xl font-semibold text-slate-800">
+          {link.name}
+        </span>
+      </Link>
+    );
+  })}
+</div>
 
-          <div className="my-6 border-t" />
-
+<div className="my-6 border-t border-[#F54284]/25" />
           {/* <p className="mb-3 px-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
             More
           </p> */}
 
-          <div className="space-y-2">
-            {moreLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={onClose}
-className="
-block
-rounded-xl
-px-4
-py-3
-text-xl
-font-semibold
-text-white
-transition-all
-duration-200
-hover:bg-white/10
-hover:text-[#F54284]
-"                // className="block rounded-xl px-4 py-3 text-lg transition hover:bg-slate-100"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
+          <div className="space-y-1">
+  {moreLinks.map((link) => {
+    const Icon = link.icon;
 
-          {/* <div className="mt-auto pt-8">
-            <Button href="/contact">
-              Book Your Trip
-            </Button>
-          </div> */}
+    return (
+      <Link
+        key={link.name}
+        href={link.href}
+        onClick={onClose}
+        className="flex items-center gap-5 rounded-xl px-5 py-4 transition hover:bg-slate-100"
+      >
+        <Icon className="h-7 w-7 text-[#F54284]" />
+
+        <span className="text-2xl font-semibold text-slate-800">
+          {link.name}
+        </span>
+      </Link>
+    );
+  })}
+</div>
+<div className="mt-auto pt-8">
+  <Button
+    href="/contact"
+    className="flex w-full items-center justify-center gap-3"
+  >
+    <Plane className="h-5 w-5" />
+    Book Your Trip
+  </Button>
+</div>
         </nav>
       </aside>
     </>
