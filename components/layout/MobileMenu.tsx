@@ -115,11 +115,11 @@ export default function MobileMenu({
             ))}
           </div>
 
-          <div className="mt-auto pt-8">
+          {/* <div className="mt-auto pt-8">
             <Button href="/contact">
               Book Your Trip
             </Button>
-          </div>
+          </div> */}
         </nav>
       </aside>
     </>
