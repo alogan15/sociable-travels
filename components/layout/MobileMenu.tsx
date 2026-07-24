@@ -4,6 +4,8 @@ import Link from "next/link";
 import { X } from "lucide-react";
 import Button from "../ui/Button";
 import { useEffect } from "react";
+import Image from "next/image";
+
 
 type MobileMenuProps = {
   open: boolean;
@@ -62,9 +64,23 @@ export default function MobileMenu({
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b p-6">
-    <h2 className="text-xl font-bold text-[#0B3C5D]">
-  Sociable Travels
-</h2>
+<div className="flex items-center justify-between border-b p-6">
+  <Image
+    src="/images/logo/sociable-logo2.png"
+    alt="Sociable Travels"
+    width={170}
+    height={60}
+    className="object-contain"
+  />
+
+  <button
+    onClick={onClose}
+    className="rounded-lg p-2 transition hover:bg-slate-100"
+    aria-label="Close menu"
+  >
+    <X className="h-6 w-6" />
+  </button>
+</div>
 
           <button
             onClick={onClose}
