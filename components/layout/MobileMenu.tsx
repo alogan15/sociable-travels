@@ -62,9 +62,9 @@ export default function MobileMenu({
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b p-6">
-          <h2 className="text-xl font-bold text-[#0B3C5D]">
-            Sociable Travels
-          </h2>
+    <h2 className="text-xl font-bold text-[#0B3C5D]">
+  Sociable Travels
+</h2>
 
           <button
             onClick={onClose}
