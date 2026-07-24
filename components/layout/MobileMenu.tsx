@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import Button from "../ui/Button";
 import { useEffect } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 
 type MobileMenuProps = {
@@ -30,6 +31,9 @@ export default function MobileMenu({
   open,
   onClose,
 }: MobileMenuProps) {
+
+  const pathname = usePathname();
+
 
   useEffect(() => {
   if (open) {
@@ -73,27 +77,64 @@ export default function MobileMenu({
   />
 </div>
 
-          <button
+          {/* <button
             onClick={onClose}
             className="rounded-lg p-2 transition hover:bg-slate-100"
             aria-label="Close menu"
           >
             <X className="h-6 w-6" />
-          </button>
+          </button> */}
 
         {/* Main Links */}
           <nav className="flex flex-1 flex-col overflow-y-auto p-6">
             <div className="space-y-2">
-            {links.map((link) => (
+            {/* {links.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={onClose}
-                className="block rounded-xl px-4 py-2 text-base font-medium transition hover:bg-slate-100"
-              >
+className="
+block
+rounded-xl
+px-4
+py-3
+text-xl
+font-semibold
+text-white
+transition-all
+duration-200
+hover:bg-white/10
+hover:text-[#F54284]
+"              >
                 {link.name}
               </Link>
-            ))}
+            ))} */}
+
+            {links.map((link) => (
+  <Link
+    key={link.name}
+    href={link.href}
+    onClick={onClose}
+    className={`
+      flex items-center gap-3 rounded-xl px-4 py-3 text-xl font-semibold transition-all duration-200
+      ${
+        pathname === link.href
+          ? "bg-white/10 text-[#39D5E8]"
+          : "text-white hover:bg-white/10 hover:text-[#F54284]"
+      }
+    `}
+  >
+    <span
+      className={`h-6 w-1 rounded-full ${
+        pathname === link.href
+          ? "bg-[#39D5E8]"
+          : "bg-transparent"
+      }`}
+    />
+
+    {link.name}
+  </Link>
+))}
           </div>
 
           <div className="my-6 border-t" />
@@ -108,7 +149,19 @@ export default function MobileMenu({
                 key={link.name}
                 href={link.href}
                 onClick={onClose}
-                className="block rounded-xl px-4 py-3 text-lg transition hover:bg-slate-100"
+className="
+block
+rounded-xl
+px-4
+py-3
+text-xl
+font-semibold
+text-white
+transition-all
+duration-200
+hover:bg-white/10
+hover:text-[#F54284]
+"                // className="block rounded-xl px-4 py-3 text-lg transition hover:bg-slate-100"
               >
                 {link.name}
               </Link>
