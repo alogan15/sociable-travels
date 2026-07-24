@@ -63,13 +63,12 @@ export default function MobileMenu({
         }`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b p-6">
 <div className="flex items-center justify-between border-b p-6">
   <Image
     src="/images/logo/sociable-logo2.png"
     alt="Sociable Travels"
-    width={170}
-    height={60}
+    width={140}
+    height={52}
     className="object-contain"
   />
 </div>
@@ -81,17 +80,16 @@ export default function MobileMenu({
           >
             <X className="h-6 w-6" />
           </button>
-        </div>
 
         {/* Main Links */}
-        <nav className="flex flex-1 flex-col p-6">
-          <div className="space-y-2">
+          <nav className="flex flex-1 flex-col overflow-y-auto p-6">
+            <div className="space-y-2">
             {links.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={onClose}
-                className="block rounded-xl px-4 py-3 text-lg font-medium transition hover:bg-slate-100"
+                className="block rounded-xl px-4 py-2 text-base font-medium transition hover:bg-slate-100"
               >
                 {link.name}
               </Link>
@@ -100,9 +98,9 @@ export default function MobileMenu({
 
           <div className="my-6 border-t" />
 
-          <p className="mb-3 px-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
+          {/* <p className="mb-3 px-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
             More
-          </p>
+          </p> */}
 
           <div className="space-y-2">
             {moreLinks.map((link) => (
