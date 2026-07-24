@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { X } from "lucide-react";
 import Button from "../ui/Button";
+import { useEffect } from "react";
 
 type MobileMenuProps = {
   open: boolean;
@@ -27,6 +28,19 @@ export default function MobileMenu({
   open,
   onClose,
 }: MobileMenuProps) {
+
+  useEffect(() => {
+  if (open) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+
+  return () => {
+    document.body.style.overflow = "";
+  };
+}, [open]);
+
   console.log("MobileMenu open:", open);
   return (
     <>
@@ -42,7 +56,7 @@ export default function MobileMenu({
 
       {/* Drawer */}
       <aside
-        className={`fixed right-0 top-0 z-50 flex h-screen w-80 max-w-[85vw] flex-col bg-white shadow-2xl transition-transform duration-300 ${
+        className={`fixed right-0 top-0 z-50 flex h-screen w-72 flex-col bg-white shadow-2xl transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
