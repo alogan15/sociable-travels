@@ -110,31 +110,33 @@ hover:text-[#F54284]
               </Link>
             ))} */}
 
-            {links.map((link) => (
-  <Link
-    key={link.name}
-    href={link.href}
-    onClick={onClose}
-    className={`
-      flex items-center gap-3 rounded-xl px-4 py-3 text-xl font-semibold transition-all duration-200
-      ${
-        pathname === link.href
-          ? "bg-white/10 text-[#39D5E8]"
-          : "text-white hover:bg-white/10 hover:text-[#F54284]"
-      }
-    `}
-  >
-    <span
-      className={`h-6 w-1 rounded-full ${
-        pathname === link.href
-          ? "bg-[#39D5E8]"
-          : "bg-transparent"
-      }`}
-    />
+{links.map((link) => {
+  const isActive = pathname === link.href;
 
-    {link.name}
-  </Link>
-))}
+  return (
+    <Link
+      key={link.name}
+      href={link.href}
+      onClick={onClose}
+      className={`
+        flex items-center gap-3 rounded-xl px-4 py-3 text-xl font-semibold transition-all duration-200
+        ${
+          isActive
+            ? "bg-white/10 text-[#39D5E8]"
+            : "text-white hover:bg-white/10 hover:text-[#F54284]"
+        }
+      `}
+    >
+      <span
+        className={`h-6 w-1 rounded-full ${
+          isActive ? "bg-[#39D5E8]" : "bg-transparent"
+        }`}
+      />
+
+      <span>{link.name}</span>
+    </Link>
+  );
+})}
           </div>
 
           <div className="my-6 border-t" />
