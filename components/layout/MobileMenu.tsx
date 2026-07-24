@@ -72,14 +72,6 @@ export default function MobileMenu({
     height={60}
     className="object-contain"
   />
-
-  <button
-    onClick={onClose}
-    className="rounded-lg p-2 transition hover:bg-slate-100"
-    aria-label="Close menu"
-  >
-    <X className="h-6 w-6" />
-  </button>
 </div>
 
           <button
