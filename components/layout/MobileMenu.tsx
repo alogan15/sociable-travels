@@ -67,14 +67,22 @@ export default function MobileMenu({
         }`}
       >
         {/* Header */}
-<div className="flex items-center justify-between border-b p-6">
+<div className="border-b border-white/10 px-6 py-8 text-center">
   <Image
     src="/images/logo/sociable-logo2.png"
     alt="Sociable Travels"
-    width={140}
-    height={52}
-    className="object-contain"
+    width={150}
+    height={70}
+    className="mx-auto object-contain"
   />
+
+  <p className="mt-4 text-sm font-medium tracking-wide text-slate-300">
+    Dream It. Plan It.
+  </p>
+
+  <p className="text-sm font-medium tracking-wide text-slate-300">
+    Experience It.
+  </p>
 </div>
 
           {/* <button
