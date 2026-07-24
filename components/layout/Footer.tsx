@@ -79,7 +79,7 @@ export default function Footer() {
 
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-[var(--secondary)]" />
-                (346)669-4779
+                (832)543-6351
               </li>
 
               <li className="flex items-center gap-3">

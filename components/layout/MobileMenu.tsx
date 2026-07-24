@@ -27,6 +27,7 @@ export default function MobileMenu({
   open,
   onClose,
 }: MobileMenuProps) {
+  console.log("MobileMenu open:", open);
   return (
     <>
       {/* Overlay */}

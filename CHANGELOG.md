@@ -10,17 +10,18 @@
 
 ---
 
-## v0.2.0 — Foundation & Navigation
+## v0.2.0 — Foundation & Layout
 
 ### Added
 - Responsive navigation
 - Footer component
 - Reusable Button component
-- Container layout component
+- Container component
+- Shared layout architecture
 
 ---
 
-## v0.3.0 — Hero Section
+## v0.3.0 — Hero Experience
 
 ### Added
 - Responsive Hero section
@@ -31,7 +32,8 @@
 
 ### Updated
 - Improved Hero responsiveness
-- Refined Hero layout
+- Refined Hero typography
+- Enhanced Hero layout
 
 ---
 
@@ -43,12 +45,12 @@
 - How It Works section
 - StepCard component
 - Reusable SectionHeader component
-- Centralized font management
 
 ### Updated
-- Homepage layout structure
-- Section spacing
+- Homepage layout
+- Shared spacing
 - Component organization
+- Font management
 
 ---
 
@@ -62,28 +64,72 @@
 
 ### Updated
 - Client-approved branding refresh
-- New logo integration
-- Bright color palette
-- Global CSS theme variables
-- Hero typography
+- Logo integration
+- Global color theme
 - Homepage visual consistency
+- Typography refinements
+
+---
+
+## v0.6.0 — Homepage Completion
+
+### Added
+- CTA section
+- Footer
+- "More" navigation dropdown
+- Improved desktop navigation structure
+
+### Updated
+- Homepage section order
+- CTA messaging
+- Footer layout
+- Navigation spacing
+- Desktop navigation UX
+- Overall homepage consistency
+
+### In Progress
+- Mobile navigation drawer
+- Responsive homepage polish
 
 ---
 
 ## Upcoming
 
-### v0.6.0
-- CTA / Newsletter section
-- Footer polish
-- Mobile navigation
-- Responsive refinements
+### v0.7.0 — Core Pages
 
-### v0.7.0
+- Destinations page
+- Services page
+- About page
+- Reviews page
+- Contact / Start Planning page
+
+---
+
+### v0.8.0 — Functionality
+
 - Booking form
 - Contact form integration
-- SEO improvements
+- Newsletter integration
+- Supabase backend
+- Client dashboard
 
-### v1.0.0
+---
+
+### v0.9.0 — Optimization
+
+- SEO improvements
+- Analytics
+- Accessibility audit
+- Performance optimization
+- Animation polish
+
+---
+
+## v1.0.0 — Production Launch
+
+### Planned
 - Client approval
 - Production deployment
-- Initial public launch
+- Final QA
+- Public launch
+- Client handoff

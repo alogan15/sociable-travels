@@ -5,25 +5,26 @@ import HeroTrustBar from "./HeroTrustBar";
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden">
-        {/* Background Image */}
+      {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="pointer-events-none absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: "url('/images/hero/travel.jpg')",
         }}
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/35 to-black/20" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/65 via-black/35 to-black/20" />
 
-      {/* Content Container */}
+      {/* Content */}
       <Container>
         <div className="relative z-10 flex min-h-screen items-center py-12 lg:py-16">
-            {<div className="relative z-10 flex items-center">
-        <HeroContent />
-        </div>}
+          <HeroContent />
         </div>
       </Container>
+
+      {/* Trust Bar (if you're using it) */}
+      {/* <HeroTrustBar /> */}
     </section>
   );
 }

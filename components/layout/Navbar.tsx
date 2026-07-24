@@ -65,28 +65,27 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:block">
-        <button
-  onClick={() => {
-    console.log("clicked");
-    setMobileOpen(true);
-  }}
-  aria-label="Open menu"
-  className="rounded-lg p-2 hover:bg-slate-100"
->
-  <Menu className="h-7 w-7" />
-</button>
+            <Button href="/contact">
+              Book Your Trip
+            </Button>
           </div>
 
           {/* Mobile Hamburger */}
           <div className="lg:hidden">
             <button
-              onClick={() => setMobileOpen(true)}
+              // onClick={() => setMobileOpen(true)}
+              onClick={() => {
+  console.log("Opening menu...");
+  setMobileOpen(true);
+}}
               aria-label="Open menu"
               className="rounded-lg p-2 transition hover:bg-slate-100"
             >
               <Menu className="h-7 w-7 text-slate-800" />
             </button>
           </div>
+        
+
         </div>
       </Container>
 

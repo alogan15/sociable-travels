@@ -3,31 +3,42 @@
 
 **Client:** Sociable Travels  
 **Developer:** From London to Paris LLC  
-**Status:** 🟢 Homepage MVP In Development
+**Status:** 🟢 Homepage Development (Polish Phase)
 
 ---
 
 # 🚧 In Progress
 
-## Homepage MVP
+## Homepage
 
 - [x] Hero
 - [x] Destinations
 - [x] How It Works
 - [x] Testimonials
 - [x] Why Choose Us
-- [ ] CTA / Newsletter
-- [ ] Footer Polish
+- [x] CTA
+- [x] Footer
 - [ ] Mobile Navigation
 - [ ] Homepage Responsive Pass
+- [ ] Homepage Animation Pass
 
 ---
 
 # 👀 Ready for Client Review
 
-- [ ] Homepage (after CTA & Footer)
-- [ ] Booking Form
-- [ ] Dashboard
+- [ ] Homepage (after mobile navigation & responsive polish)
+
+---
+
+# 🗺️ Next Up
+
+## Core Pages
+
+- [ ] Destinations
+- [ ] Services
+- [ ] About
+- [ ] Reviews
+- [ ] Contact / Start Planning
 
 ---
 
@@ -35,157 +46,169 @@
 
 ## Features
 
-- [ ] Gallery / Vacation Types section (client decision)
 - [ ] Booking Form
-- [ ] Dashboard
-- [ ] SEO
-- [ ] Deployment
-- [ ] Analytics
+- [ ] Client Dashboard
 - [ ] Contact Form Integration
+- [ ] Newsletter Integration
+- [ ] SEO
+- [ ] Analytics
+- [ ] Production Deployment
 
 ---
 
-## UI Framework Improvements
+## UI Improvements
 
-- [ ] Convert remaining data files to use Lucide icon components instead of icon strings where applicable.
-- [ ] Create reusable card animation component.
-- [ ] Create reusable section spacing utility.
+- [ ] Create reusable card animation component
+- [ ] Create reusable section spacing utility
+- [ ] Shared page header component
+- [ ] Empty state component
 
 ---
 
-# 🔄 Technical Debt / Polish Backlog
-
-## Hero
-
-- [ ] Decide between Hero Trust Bar vs. Why Choose Us section (client review)
-- [ ] Fine-tune Hero height on mobile
-- [ ] Update Hero height to `min-h-[calc(100vh-88px)]` after navbar height is finalized
-- [ ] Final spacing adjustments
-- [ ] Typography polish
-- [ ] Optional scroll indicator
-
-## Homepage
-
-- [ ] Final responsive pass
-- [ ] Consistent vertical spacing between sections
-- [ ] Hover animation polish
-- [ ] Scroll reveal animations
-- [ ] Smooth scrolling
-- [ ] Loading animations
+# 🔄 Polish Backlog
 
 ## Navigation
 
+- [x] Redesigned desktop navigation
+- [x] "More" dropdown
+- [ ] Mobile navigation drawer
 - [ ] Transparent navbar over Hero
-- [ ] Solid navbar on scroll
+- [ ] Navbar color change on scroll
 - [ ] Active page indicator
-- [ ] Mobile menu animations
+- [ ] Mobile menu animation
+
+---
+
+## Homepage
+
+- [ ] Responsive polish
+- [ ] Consistent vertical spacing
+- [ ] Hover animation polish
+- [ ] Scroll reveal animations
+- [ ] Smooth scrolling
+- [ ] Loading states
+- [ ] Accessibility pass
+
+---
+
+## Hero
+
+- [ ] Fine-tune mobile height
+- [ ] Final typography polish
+- [ ] Optional scroll indicator
+
+---
 
 ## Footer
 
-- [ ] Background treatment
-- [ ] Social icon hover states
-- [ ] Final responsive polish
+- [ ] Responsive polish
+- [ ] Background refinement
 
 ---
 
 # ✅ Completed
 
-## Project Setup
+## Foundation
 
-- [x] Project initialized
+- [x] Project initialization
 - [x] GitHub repository
-- [x] Folder structure
-- [x] Next.js configured
-- [x] Tailwind configured
+- [x] Next.js setup
+- [x] Tailwind CSS setup
+- [x] Project folder structure
 
 ---
 
 ## Shared Components
 
+- [x] Container
 - [x] Button
 - [x] SectionHeader
+- [x] Logo
 - [x] Footer
-- [x] Container component
 
 ---
 
 ## Branding
 
-- [x] Client-approved color palette
-- [x] Updated logo
-- [x] Google font integration
+- [x] Client color palette
+- [x] Typography
+- [x] Logo integration
 - [x] Global CSS variables
-- [x] Branding refresh based on client feedback
+- [x] Branding refresh
 
 ---
 
-## Homepage Sections
+## Homepage
 
 ### Navigation
 
 - [x] Navbar
-- [x] Logo integration
+- [x] Desktop navigation
+- [x] Responsive logo
+- [x] CTA button
+- [x] More dropdown
 
 ### Hero
 
 - [x] Hero layout
 - [x] Hero content
 - [x] Hero buttons
-- [x] Hero responsiveness
 - [x] Hero background
+- [x] Responsive hero
 - [x] Hero Trust Bar
-- [x] Client approval
 
 ### Destinations
 
-- [x] DestinationCard component
+- [x] DestinationCard
 - [x] Destinations section
 - [x] Destination images
-- [x] Responsive layout
 
 ### How It Works
 
-- [x] StepCard component
-- [x] Section completed
+- [x] StepCard
+- [x] How It Works section
 
 ### Testimonials
 
-- [x] TestimonialCard component
+- [x] TestimonialCard
 - [x] Testimonials section
 
 ### Why Choose Us
 
-- [x] FeatureCard component
+- [x] FeatureCard
 - [x] Why Choose Us section
+
+### CTA
+
+- [x] CTA section
+
+### Footer
+
+- [x] Footer layout
+- [x] Footer navigation
+- [x] Footer branding
 
 ---
 
-# 📍 Milestones
+# 🚀 Milestones
 
 ## Milestone 1
-
 - [x] Project Initialized
 
 ## Milestone 2
-
 - [ ] Homepage Complete
 
 ## Milestone 3
-
 - [ ] Client Homepage Approval
 
 ## Milestone 4
-
-- [ ] Supabase Connected
+- [ ] Core Pages Complete
 
 ## Milestone 5
-
-- [ ] Dashboard Complete
+- [ ] Booking System
 
 ## Milestone 6
-
-- [ ] Production Deployment
+- [ ] Production Launch
 
 ## Milestone 7
-
 - [ ] Client Handoff
