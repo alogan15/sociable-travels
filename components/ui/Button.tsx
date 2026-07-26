@@ -26,13 +26,23 @@ export default function Button({
     className
   );
 
-  if (href) {
+if (href) {
+  // Same-page anchor links
+  if (href.startsWith("#")) {
     return (
-      <Link href={href} className={classes}>
+      <a href={href} className={classes}>
         {children}
-      </Link>
+      </a>
     );
   }
+
+  // Regular page navigation
+  return (
+    <Link href={href} className={classes}>
+      {children}
+    </Link>
+  );
+}
 
   return <button className={classes}>{children}</button>;
 }

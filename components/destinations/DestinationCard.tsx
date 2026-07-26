@@ -59,7 +59,7 @@ export default function DestinationCard({
           ))}
         </div>
 
-        <Button href="/contact" className="w-full">
+        <Button href="/contact" className="w-mid">
           Plan This Trip
         </Button>
       </div>
