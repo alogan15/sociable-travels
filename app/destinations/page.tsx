@@ -1,21 +1,16 @@
-import Container from "@/components/layout/Container";
+import DestinationHero from "@/components/home/destinations/DestinationHero";
+import DestinationGrid from "@/components/home/destinations/DestinationGrid";
+import DestinationFilters from "@/components/home/destinations/DestinationFilters";
+import CTA from "@/components/home/cta/CTA";
 
 
 export default function DestinationsPage() {
   return (
-    <main className="py-24">
-      <Container>
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-slate-900">
-            Explore Our Destinations
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-            From tropical escapes to unforgettable adventures, Sociable
-            Travels helps you discover your next journey.
-          </p>
-        </div>
-      </Container>
+    <main className="bg-white">
+      <DestinationHero />
+      <DestinationFilters />
+      <DestinationGrid />
+      <CTA />
     </main>
   );
 }
