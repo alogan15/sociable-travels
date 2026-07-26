@@ -77,11 +77,11 @@ export default function MobileMenu({
         }`}
       >
         {/* Header */}
-<div className="relative border-b border-[#F54284]/20 px-8 py-8">
+<div className="relative border-b border-slate-200 px-8 py-6">
 
   <button
     onClick={onClose}
-    className="absolute right-6 top-6 text-[#F54284]"
+    className="absolute right-6 top-6 rounded-full p-2 text-[#F54284] transition-all duration-200 hover:bg-[#F54284]/10"
   >
     <X className="h-8 w-8" />
   </button>
@@ -89,18 +89,14 @@ export default function MobileMenu({
   <Image
     src="/images/logo/sociable-logo2.png"
     alt="Sociable Travels"
-    width={175}
-    height={85}
+    width={155}
+    height={75}
     className="mx-auto object-contain"
   />
 
-  <p className="mt-5 text-center text-lg font-medium text-[#39D5E8]">
-    Dream It. Plan It.
-  </p>
-
-  <p className="text-center text-lg font-medium text-[#F54284]">
-    Experience It.
-  </p>
+<p className="mt-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+  Dream • Plan • Escape
+</p>
 
 </div>
 

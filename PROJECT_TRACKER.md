@@ -9,8 +9,6 @@
 
 # 🚧 In Progress
 
-## Homepage
-
 - [x] Hero
 - [x] Destinations
 - [x] How It Works
@@ -18,7 +16,7 @@
 - [x] Why Choose Us
 - [x] CTA
 - [x] Footer
-- [ ] Mobile Navigation
+- [x] Mobile Navigation
 - [ ] Homepage Responsive Pass
 - [ ] Homepage Animation Pass
 
@@ -71,10 +69,10 @@
 
 - [x] Redesigned desktop navigation
 - [x] "More" dropdown
-- [ ] Mobile navigation drawer
+- [x] Mobile navigation drawer
 - [ ] Transparent navbar over Hero
 - [ ] Navbar color change on scroll
-- [ ] Active page indicator
+- [x] Active page indicator
 - [ ] Mobile menu animation
 
 ---
