@@ -1,6 +1,6 @@
-import DestinationHero from "@/components/home/destinations/DestinationHero";
-import DestinationGrid from "@/components/home/destinations/DestinationGrid";
-import DestinationFilters from "@/components/home/destinations/DestinationFilters";
+import DestinationHero from "@/components/destinations/DestinationHero";
+import DestinationGrid from "@/components/destinations/DestinationGrid";
+import DestinationFilters from "@/components/destinations/DestinationFilters";
 import CTA from "@/components/home/cta/CTA";
 
 
