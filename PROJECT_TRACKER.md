@@ -32,7 +32,7 @@
 
 ## Core Pages
 
-- [ ] Destinations
+- [x] Destinations
 - [ ] Services
 - [ ] About
 - [ ] Reviews

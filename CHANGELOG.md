@@ -135,14 +135,18 @@ All notable changes to the Sociable Travels project will be documented here.
 
 ## v0.7.0 — Core Pages
 
-### Planned
+### Added
 - Destinations page
-- Services page
-- About page
-- Reviews page
-- Contact / Start Planning page
-- Shared page header component
-- Consistent page layouts
+- Destination Hero
+- Destination filters
+- Destination grid
+- Dedicated Destination card component
+- Destination data model
+
+### Updated
+- Separated homepage and destination page components
+- Improved project architecture
+- Established reusable page structure
 
 ---
 

@@ -29,7 +29,7 @@ export const destinations: Destination[] = [
     description:
       "Escape to crystal-clear waters, luxurious resorts, and world-famous island excursions.",
     rating: 5,
-    tags: ["Luxury", "Cruise", "Beach"],
+    tags: ["Luxury", "Cruise", "Beach", "Resorts"],
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ export const destinations: Destination[] = [
     description:
       "Enjoy luxurious beachfront resorts, championship golf courses, and endless sunshine.",
     rating: 5,
-    tags: ["Luxury", "Golf", "Beach"],
+    tags: ["All-Inclusive", "Luxury", "Golf", "Beach"],
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ export const destinations: Destination[] = [
     description:
       "Explore iconic landmarks, world-class dining, charming cafés, and unforgettable culture.",
     rating: 5,
-    tags: ["City", "Romance", "Culture"],
+    tags: ["City", "Romance", "Luxury", "Culture"],
   },
   {
     id: 8,
