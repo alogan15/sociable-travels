@@ -13,7 +13,7 @@ export default function TestimonialCard({
   testimonial,
 }: TestimonialCardProps) {
   return (
-    <article className="rounded-3xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+    <article className="rounded-3xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       {/* Rating */}
       <div className="mb-6 flex text-2xl text-[var(--primary)]">
         {Array.from({ length: testimonial.rating }).map((_, index) => (

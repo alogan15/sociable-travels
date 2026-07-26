@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <Container>
-        <div className="flex h-20 lg:h-24 items-center justify-between">
+        <div className="flex h-24 lg:h-24 items-center justify-between">
           <Logo />
 
           <nav className="hidden items-center gap-8 lg:flex">
@@ -75,13 +75,13 @@ export default function Navbar() {
             <button
               // onClick={() => setMobileOpen(true)}
               onClick={() => {
-  console.log("Opening menu...");
-  setMobileOpen(true);
-}}
+              console.log("Opening menu...");
+              setMobileOpen(true);
+            }}
               aria-label="Open menu"
-              className="rounded-lg p-2 transition hover:bg-slate-100"
+              className="rounded-xl p-3 transition-all duration-300 hover:bg-[#39D5E8]/10 active:scale-95"
             >
-              <Menu className="h-7 w-7 text-slate-800" />
+              <Menu className="h-9 w-9 text-slate-800" />
             </button>
           </div>
         

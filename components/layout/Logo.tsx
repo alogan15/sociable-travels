@@ -7,8 +7,8 @@ export default function Logo() {
       <Image
         src="/images/logo/sociable-logo2.png"
         alt="Sociable Travels"
-        width={80}
-        height={84}
+        width={90}
+        height={90}
         className="object-contain"
       />
     </Link>
