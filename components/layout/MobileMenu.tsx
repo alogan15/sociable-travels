@@ -167,7 +167,7 @@ export default function MobileMenu({
     );
   })}
 </div>
-<div className="mt-auto pt-8">
+<div className="pt-8 pb-12">
   <Button
     href="/contact"
     className="flex w-full items-center justify-center gap-3"

@@ -1,18 +1,18 @@
 import Container from "@/components/layout/Container";
 
 
-export default function DestinationsPage() {
+export default function AboutPage() {
   return (
     <main className="py-24">
       <Container>
         <div className="text-center">
           <h1 className="text-5xl font-bold text-slate-900">
-            Explore Our Destinations
+            About Sociable Travels
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-            From tropical escapes to unforgettable adventures, Sociable
-            Travels helps you discover your next journey.
+            Passionate about creating unforgettable travel experiences for every
+            client.
           </p>
         </div>
       </Container>
