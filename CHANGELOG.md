@@ -1,5 +1,9 @@
 # Changelog
 
+All notable changes to the Sociable Travels project will be documented here.
+
+---
+
 ## v0.1.0 — Project Initialization
 
 ### Added
@@ -7,10 +11,11 @@
 - Configured Tailwind CSS
 - Created GitHub repository
 - Established project folder structure
+- Configured development environment
 
 ---
 
-## v0.2.0 — Foundation & Layout
+## v0.2.0 — Foundation & Shared Components
 
 ### Added
 - Responsive navigation
@@ -18,6 +23,12 @@
 - Reusable Button component
 - Container component
 - Shared layout architecture
+- Logo component
+- Global styling foundation
+
+### Updated
+- Project organization
+- Shared component structure
 
 ---
 
@@ -25,15 +36,18 @@
 
 ### Added
 - Responsive Hero section
-- Hero content and CTA buttons
+- Hero content and messaging
+- CTA buttons
 - Hero background image
 - Hero Trust Bar
 - Hero data configuration
 
 ### Updated
-- Improved Hero responsiveness
-- Refined Hero typography
-- Enhanced Hero layout
+- Hero responsiveness
+- Hero typography
+- Hero spacing
+- Mobile Hero layout
+- Overall visual hierarchy
 
 ---
 
@@ -50,7 +64,8 @@
 - Homepage layout
 - Shared spacing
 - Component organization
-- Font management
+- Typography
+- Responsive layouts
 
 ---
 
@@ -63,9 +78,10 @@
 - FeatureCard component
 
 ### Updated
-- Client-approved branding refresh
+- Client branding refresh
 - Logo integration
-- Global color theme
+- Color palette
+- Global CSS variables
 - Homepage visual consistency
 - Typography refinements
 
@@ -74,54 +90,86 @@
 ## v0.6.0 — Homepage Completion
 
 ### Added
-- CTA section
-- Footer
-- "More" navigation dropdown
+- Call-to-Action section
+- Footer improvements
+- Desktop "More" navigation dropdown
 - Improved desktop navigation structure
+- Mobile navigation drawer
 
 ### Updated
 - Homepage section order
 - CTA messaging
 - Footer layout
 - Navigation spacing
-- Desktop navigation UX
-- Overall homepage consistency
-
-### In Progress
-- Mobile navigation drawer
-- Responsive homepage polish
+- Homepage consistency
+- Responsive homepage layout
 
 ---
 
-## Upcoming
+## v0.6.1 — Homepage Polish
 
-### v0.7.0 — Core Pages
+### Added
+- Click-to-open desktop dropdown
+- Animated dropdown chevron
+- Enhanced dropdown hover interactions
+- Active navigation state for dropdown
 
+### Updated
+- Navbar spacing
+- Responsive logo sizing
+- Mobile header balance
+- Testimonial styling
+- "How It Works" number hierarchy
+- Homepage responsive polish
+- Navigation interaction consistency
+- Desktop navigation UX
+
+### Fixed
+- Desktop dropdown hover issue
+- Improved dropdown usability
+- Improved mobile navigation balance
+
+---
+
+# Upcoming
+
+## v0.7.0 — Core Pages
+
+### Planned
 - Destinations page
 - Services page
 - About page
 - Reviews page
 - Contact / Start Planning page
+- Shared page header component
+- Consistent page layouts
 
 ---
 
-### v0.8.0 — Functionality
+## v0.8.0 — Booking Experience
 
+### Planned
 - Booking form
 - Contact form integration
 - Newsletter integration
 - Supabase backend
 - Client dashboard
+- Form validation
+- Success & error states
 
 ---
 
-### v0.9.0 — Optimization
+## v0.9.0 — Polish & Optimization
 
-- SEO improvements
-- Analytics
+### Planned
+- Scroll reveal animations
+- Mobile menu animations
 - Accessibility audit
+- SEO improvements
+- Analytics integration
 - Performance optimization
-- Animation polish
+- Loading states
+- Final responsive QA
 
 ---
 
@@ -129,7 +177,9 @@
 
 ### Planned
 - Client approval
-- Production deployment
 - Final QA
+- Production deployment
+- Domain configuration
 - Public launch
 - Client handoff
+- Project documentation

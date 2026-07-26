@@ -26,6 +26,7 @@ const moreLinks = [
 export default function Navbar() {
 
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
@@ -43,24 +44,45 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="group relative">
-            <button className="flex items-center gap-1 font-medium transition hover:text-[var(--primary)]">
-              More
-              <ChevronDown className="h-4 w-4" />
-            </button>
+            <div className="relative">
+              <button
+                onClick={() => setMoreOpen(!moreOpen)}
+                className={`flex items-center gap-1 font-medium transition
+                  ${
+                    moreOpen
+                      ? "text-[#F54284]"
+                      : "hover:text-[#F54284]"
+                  }`}              >
+                More
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform ${
+                    moreOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
 
-            <div className="absolute right-0 mt-2 hidden w-48 rounded-2xl border border-slate-200 bg-white p-2 shadow-xl group-hover:block">
-              {moreLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="block rounded-lg px-4 py-2 transition hover:bg-slate-100"
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {moreOpen && (
+                <div className="absolute right-0 top-full mt-2 w-48 rounded-2xl border border-slate-200 bg-white p-2 shadow-xl">
+                  {moreLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setMoreOpen(false)}
+                      className="
+                        block rounded-xl px-4 py-2
+                        font-medium
+                        transition-all duration-200
+                        hover:bg-gradient-to-r
+                        hover:from-[#39D5E8]/10
+                        hover:to-[#F54284]/10
+                        hover:text-[#F54284]
+                      ">
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
-          </div>
           </nav>
 
           {/* Desktop CTA */}

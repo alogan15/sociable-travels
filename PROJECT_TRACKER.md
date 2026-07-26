@@ -17,14 +17,14 @@
 - [x] CTA
 - [x] Footer
 - [x] Mobile Navigation
-- [ ] Homepage Responsive Pass
+- [x] Homepage Responsive Pass
 - [ ] Homepage Animation Pass
 
 ---
 
 # 👀 Ready for Client Review
 
-- [ ] Homepage (after mobile navigation & responsive polish)
+- [ ] Homepage (after animation pass)
 
 ---
 
@@ -74,18 +74,20 @@
 - [ ] Navbar color change on scroll
 - [x] Active page indicator
 - [ ] Mobile menu animation
+- [x] Desktop dropdown improvements
 
 ---
 
 ## Homepage
 
-- [ ] Responsive polish
-- [ ] Consistent vertical spacing
-- [ ] Hover animation polish
-- [ ] Scroll reveal animations
-- [ ] Smooth scrolling
-- [ ] Loading states
-- [ ] Accessibility pass
+### Navigation
+
+- [x] Navbar
+- [x] Desktop navigation
+- [x] Responsive logo
+- [x] CTA button
+- [x] More dropdown
+- [x] Mobile navigation
 
 ---
 
@@ -99,7 +101,7 @@
 
 ## Footer
 
-- [ ] Responsive polish
+- [x] Responsive polish
 - [ ] Background refinement
 
 ---
