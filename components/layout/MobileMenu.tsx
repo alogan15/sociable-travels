@@ -32,14 +32,14 @@ const links = [
   { name: "Destinations", href: "/destinations", icon: MapPinned },
   { name: "Specials", href: "/specials", icon: Gift },
   { name: "Services", href: "/services", icon: BriefcaseBusiness },
-  { name: "Reviews", href: "/reviews", icon: Star },
+  { name: "Testimonials", href: "/reviews", icon: Star },
   { name: "Contact", href: "/contact", icon: Mail },
 ];
 
 const moreLinks = [
   { name: "About", href: "/about", icon: User },
   { name: "Gallery", href: "/gallery", icon: ImageIcon },
-  { name: "FAQ", href: "/faq", icon: CircleHelp },
+  // { name: "FAQ", href: "/faq", icon: CircleHelp },
 ];
 
 export default function MobileMenu({

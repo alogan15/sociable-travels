@@ -12,8 +12,8 @@ export default function CTA({
   eyebrow = "Ready to Explore?",
   title = "Let's Plan Your Next Adventure",
   description = "Whether you're dreaming of a relaxing beach escape, an unforgettable cruise, or an adventure abroad, Sociable Travels is here to make your journey seamless from start to finish.",
-  buttonText = "Start Planning",
-  buttonHref = "/contact",
+  buttonText,
+  buttonHref,
 }: CTAProps) {
   return (
     <section className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] py-24">
@@ -30,9 +30,13 @@ export default function CTA({
           {description}
         </p>
 
-        <div className="mt-10">
-          <Button href={buttonHref}>{buttonText}</Button>
-        </div>
+        {buttonText && buttonHref && (
+          <div className="mt-10">
+            <Button href={buttonHref}>
+              {buttonText}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

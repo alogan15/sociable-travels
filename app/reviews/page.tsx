@@ -1,21 +1,23 @@
-import Container from "@/components/layout/Container";
-
+import ReviewsHero from "@/components/reviews/ReviewsHero";
+import ReviewsGrid from "@/components/reviews/ReviewsGrid";
+import WhyClientsLoveUs from "@/components/reviews/WhyClientsLoveUs";
+import CTA from "@/components/cta/CTA";
 
 export default function ReviewsPage() {
   return (
-    <main className="py-24">
-      <Container>
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-slate-900">
-            Client Reviews
-          </h1>
+    <>
+      <ReviewsHero />
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-            Hear what travelers have to say about their experiences with
-            Sociable Travels.
-          </p>
-        </div>
-      </Container>
-    </main>
+      <ReviewsGrid />
+
+      <WhyClientsLoveUs />
+
+      <CTA
+        eyebrow="Your Story Starts Here"
+        title="Ready to Create Your Own Travel Story?"
+        description="Join travelers who have trusted Sociable Travels to plan unforgettable vacations around the world."
+       
+      />
+    </>
   );
 }

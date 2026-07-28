@@ -14,14 +14,18 @@ const links = [
   { name: "Destinations", href: "/destinations" },
   { name: "Specials", href: "/specials" },
   { name: "Services", href: "/services" },
-  { name: "Reviews", href: "/reviews" },
+  // { name: "Testimonials", href: "/reviews" },
   { name: "Contact", href: "/contact" },
+  // { name: "About", href: "/about" },
+
 ];
 
 const moreLinks = [
+  { name: "Testimonials", href: "/reviews" },
   { name: "About", href: "/about" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "FAQ", href: "/faq" },
+  // { name: "About", href: "/about" },
+  // { name: "Gallery", href: "/gallery" },
+  // { name: "FAQ", href: "/faq" },
 ];
 
 export default function Navbar() {

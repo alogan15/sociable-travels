@@ -1,20 +1,22 @@
-import Container from "@/components/layout/Container";
-
+import ContactHero from "@/components/contact/ContactHero";
+import ContactForm from "@/components/contact/ContactForm";
+import ContactInfo from "@/components/contact/ContactInfo";
+import FAQ from "@/components/contact/FAQ";
 
 export default function ContactPage() {
   return (
-    <main className="py-24">
-      <Container>
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-slate-900">
-            Start Planning
-          </h1>
+    <>
+      <ContactHero />
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-            Let's start planning your next unforgettable vacation together.
-          </p>
+      <section className="bg-white py-24">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+          <ContactForm />
+
+          <ContactInfo />
         </div>
-      </Container>
-    </main>
+      </section>
+
+      <FAQ />
+    </>
   );
 }
