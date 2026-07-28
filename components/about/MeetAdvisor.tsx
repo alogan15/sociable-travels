@@ -1,4 +1,4 @@
-import Image from "next/image";
+ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { Award, Globe2, Heart } from "lucide-react";
 
@@ -11,7 +11,7 @@ export default function MeetAdvisor() {
           <div className="overflow-hidden rounded-3xl shadow-2xl">
             <Image
               src="/images/about-story.jpg"
-              alt="Travel Advisor at Sociable Travels"
+              alt="Nastasia S., Travel Advisor at Sociable Travels"
               width={700}
               height={850}
               className="h-full w-full object-cover"
@@ -25,23 +25,30 @@ export default function MeetAdvisor() {
             Meet Your Travel Advisor
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-            Your Journey Starts
-            <span className="block text-cyan-500">
-              With Someone Who Cares
-            </span>
-          </h2>
+          <div className="mt-6">
+            <h2 className="text-4xl font-bold text-slate-900 md:text-5xl">
+              Nastasia S.
+            </h2>
+
+            <p className="mt-2 text-lg font-semibold text-cyan-500">
+              Travel Advisor
+            </p>
+          </div>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            At Sociable Travels, you're more than a reservation number. Every
-            itinerary is planned with care, attention to detail, and a genuine
-            passion for helping people explore the world with confidence.
+            With a passion for creating unforgettable travel experiences,
+            Nastasia works closely with every client to design personalized
+            vacations that fit their dreams, budget, and travel style. Whether
+            you're planning a relaxing beach escape, an exciting cruise, or a
+            once-in-a-lifetime adventure, she's committed to making every
+            journey seamless from start to finish.
           </p>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Whether you're celebrating a milestone, planning a family vacation,
-            or taking your dream getaway, you'll have a dedicated advisor who
-            listens, guides, and supports you every step of the way.
+            At Sociable Travels, you're more than a reservation number. Every
+            itinerary is planned with care, attention to detail, and genuine
+            dedication to helping travelers create memories that last a
+            lifetime.
           </p>
 
           <div className="mt-10 grid gap-5">
@@ -55,7 +62,7 @@ export default function MeetAdvisor() {
             <div className="flex items-center gap-4">
               <Globe2 className="text-cyan-500" />
               <span className="text-slate-700">
-                Destination knowledge and trusted partners
+                Destination knowledge and trusted travel partners
               </span>
             </div>
 
@@ -67,11 +74,11 @@ export default function MeetAdvisor() {
             </div>
           </div>
 
-          <div className="mt-10">
+          {/* <div className="mt-10">
             <Button href="/contact">
               Start Planning Together
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
