@@ -14,8 +14,21 @@ export const metadata: Metadata = {
     default: "Sociable Travels",
     template: "%s | Sociable Travels",
   },
+
   description:
     "Personalized travel planning and unforgettable vacation experiences.",
+
+  openGraph: {
+    title: "Sociable Travels",
+    description:
+      "Personalized travel planning and unforgettable vacation experiences.",
+    images: ["/sociable-logo.jpg"],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    images: ["/sociable-logo.jpg"],
+  },
 };
 
 export default function RootLayout({
