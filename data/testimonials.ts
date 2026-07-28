@@ -1,17 +1,17 @@
 export const testimonials = [
   {
-    name: "Sarah M.",
-    location: "Jamaica",
+    name: "Markel Foster",
+    location: "Punta Cana, Dominican Republic",
     rating: 5,
     review:
-      "Everything was planned perfectly. All we had to do was show up and enjoy ourselves.",
+      "From the very beginning, she made planning this trip easy and stress-free. Every recommendation was on point, and our vacation exceeded every expectation.",
   },
   {
-    name: "Marcus T.",
-    location: "Cruise",
+    name: "Tameka Nelson",
+    location: "Thailand",
     rating: 5,
     review:
-      "Our family vacation was stress-free from beginning to end. Highly recommend!",
+      "She was there every step of the way. Her dedication, professionalism, and genuine care gave us complete peace of mind throughout our trip.",
   },
   {
     name: "Jennifer L.",
