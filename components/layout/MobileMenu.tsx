@@ -38,7 +38,7 @@ const links = [
 
 const moreLinks = [
   { name: "About", href: "/about", icon: User },
-  { name: "Gallery", href: "/gallery", icon: ImageIcon },
+  // { name: "Gallery", href: "/gallery", icon: ImageIcon },
   // { name: "FAQ", href: "/faq", icon: CircleHelp },
 ];
 
