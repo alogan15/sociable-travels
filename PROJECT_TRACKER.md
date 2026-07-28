@@ -58,6 +58,12 @@
 
 ---
 
+## Client Content Updates
+
+- [ ] Add Brand Manager profile to the About page beneath "Meet Your Travel Advisor"
+- [ ] Include professional photo, role, and short biography
+- [ ] Update layout to showcase the leadership team
+
 ## Client Experience
 
 - [ ] Gallery Page (if requested)

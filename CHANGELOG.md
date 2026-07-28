@@ -238,6 +238,8 @@ All notable changes to the Sociable Travels project will be documented here.
 - SEO enhancements
 - Image optimization
 - Accessibility improvements
+- Add Brand Manager profile to the About page
+- Expand leadership section to feature the Sociable Travels team
 
 ---
 

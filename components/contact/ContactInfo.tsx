@@ -42,7 +42,7 @@ export default function ContactInfo() {
             </h3>
 
             <p className="mt-1 text-slate-600">
-              (832) 543-6352
+              (832) 543-6351
             </p>
           </div>
         </div>
