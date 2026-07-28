@@ -9,6 +9,10 @@ import {
   Star,
   Mail,
   User,
+  Tag,
+  Gift,
+  Sparkles,
+  Palmtree,
   ImageIcon,
   CircleHelp,
   Plane,
@@ -26,6 +30,7 @@ type MobileMenuProps = {
 const links = [
   { name: "Home", href: "/", icon: House },
   { name: "Destinations", href: "/destinations", icon: MapPinned },
+  { name: "Specials", href: "/specials", icon: Gift },
   { name: "Services", href: "/services", icon: BriefcaseBusiness },
   { name: "Reviews", href: "/reviews", icon: Star },
   { name: "Contact", href: "/contact", icon: Mail },

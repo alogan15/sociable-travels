@@ -12,6 +12,7 @@ import MobileMenu from "./MobileMenu";
 const links = [
   { name: "Home", href: "/" },
   { name: "Destinations", href: "/destinations" },
+  { name: "Specials", href: "/specials" },
   { name: "Services", href: "/services" },
   { name: "Reviews", href: "/reviews" },
   { name: "Contact", href: "/contact" },
