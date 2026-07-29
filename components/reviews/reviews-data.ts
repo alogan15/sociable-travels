@@ -28,4 +28,14 @@ export const reviews: Review[] = [
     review:
       "Traveling to Thailand was a big trip for our family, and we wanted everything to be perfect. Sociable Travels delivered exactly that. From months of planning until we landed safely back home, Nastasia was there every step of the way. She even went above and beyond when we almost missed our flight by helping coordinate with the hotel and transportation service. Her professionalism and genuine care gave us peace of mind throughout the entire vacation.",
   },
+ {
+  id: 3,
+  name: "Hazel L.",
+  destination: "Stress-Free Travel Planning",
+  rating: 5,
+  quote:
+    "When unexpected changes forced me to cancel my trip, she handled everything with compassion, professionalism, and incredible attention to detail.",
+  review:
+    "I cannot recommend Sociable Travels highly enough. When unforeseen events forced me to cancel my Dubai trip, Nastasia immediately stepped in and handled everything with professionalism, compassion, and incredible knowledge. She quickly adjusted my accommodations to a new destination and managed every detail I never could have handled on my own. Her responsiveness, attention to detail, and genuine care made the entire process effortless. She took all the stress out of travel planning, and I'm already trusting her with my next trip. If you want stress-free travel planning, Sociable Travels is the place.",
+}
 ];
