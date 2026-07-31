@@ -3,7 +3,7 @@ import PageHero from "@/components/ui/PageHero";
 export default function DestinationHero() {
   return (
     <PageHero
-      eyebrow="✈️ Explore the World with Confidence"
+      eyebrow="Explore the World with Confidence"
       title="Discover Your Next"
       highlight="Dream Destination"
       description="Whether you're dreaming of relaxing on a tropical beach, sailing on a luxury cruise, or exploring vibrant cities, Sociable Travels helps you plan unforgettable experiences tailored just for you."

@@ -14,10 +14,10 @@ export const testimonials = [
       "She was there every step of the way. Her dedication, professionalism, and genuine care gave us complete peace of mind throughout our trip.",
   },
   {
-    name: "Jennifer L.",
-    location: "Bahamas",
+    name: "Hazel L.",
+    location: "Stress-Free Travel Planning",
     rating: 5,
     review:
-      "Amazing communication and personalized service. We'll definitely book again.",
+    "When unexpected changes forced me to cancel my trip, she handled everything with compassion, professionalism, and incredible attention to detail.",
   },
 ];

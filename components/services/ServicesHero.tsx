@@ -15,7 +15,7 @@ export default function ServicesHero() {
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 text-center text-white">
         <span className="mb-4 rounded-full bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur">
-          🌍 Personalized Travel Services
+          Personalized Travel Services
         </span>
 
         <h1 className="text-4xl font-bold leading-tight md:text-6xl">

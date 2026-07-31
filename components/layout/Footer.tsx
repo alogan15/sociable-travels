@@ -1,7 +1,6 @@
 import Link from "next/link";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import {
-  Globe,
-  Camera,
   MapPin,
   Mail,
   Phone,
@@ -26,19 +25,23 @@ export default function Footer() {
 
             <div className="mt-6 flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/g/1DMPsqe1Ef/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="rounded-full bg-white/10 p-3 transition hover:bg-[var(--primary)]"
               >
-                <Globe size={18} />
+                <FaFacebookF size={18} />
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/the_sociable_chef/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="rounded-full bg-white/10 p-3 transition hover:bg-[var(--secondary)]"
               >
-                <Camera size={18} />
+                <FaInstagram size={18} />
               </a>
             </div>
           </div>

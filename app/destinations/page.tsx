@@ -8,7 +8,7 @@ export default function DestinationsPage() {
   return (
     <main className="bg-white">
       <DestinationHero />
-      <DestinationFilters />
+      {/* <DestinationFilters /> */}
       <DestinationGrid />
       <CTA />
     </main>
