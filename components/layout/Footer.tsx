@@ -35,7 +35,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.instagram.com/the_sociable_chef/"
+                href="https://www.instagram.com/sociable_travels/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
