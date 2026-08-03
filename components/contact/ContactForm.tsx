@@ -13,17 +13,25 @@ type ContactFormData = {
   message: string;
 };
 
+const initialFormData: ContactFormData = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  destination: "",
+  travelDates: "",
+  travelers: "",
+  message: "",
+};
+
 export default function ContactForm() {
-  const [formData, setFormData] = useState<ContactFormData>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    destination: "",
-    travelDates: "",
-    travelers: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(initialFormData);
+
+  const [loading, setLoading] = useState(false);
+
+  const [successMessage, setSuccessMessage] = useState("");
+
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (
     e: ChangeEvent<
@@ -36,13 +44,46 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (
+    e: FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
 
-    console.log(formData);
+    setLoading(true);
+    setSuccessMessage("");
+    setErrorMessage("");
 
-    // TODO:
-    // Send data to API / Resend / Supabase
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.message || "Something went wrong."
+        );
+      }
+
+      setSuccessMessage(data.message);
+
+      setFormData(initialFormData);
+    } catch (error) {
+      if (error instanceof Error) {
+        setErrorMessage(error.message);
+      } else {
+        setErrorMessage(
+          "Something went wrong. Please try again."
+        );
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -60,6 +101,18 @@ export default function ContactForm() {
           Tell us about your dream vacation and we'll help make it a reality.
         </p>
       </div>
+
+      {successMessage && (
+        <div className="mb-6 rounded-xl border border-green-200 bg-green-50 p-4 text-green-700">
+          {successMessage}
+        </div>
+      )}
+
+      {errorMessage && (
+        <div className="mb-6 rounded-xl border border-red-200 bg-red-50 p-4 text-red-700">
+          {errorMessage}
+        </div>
+      )}
 
       <form
         onSubmit={handleSubmit}
@@ -239,12 +292,30 @@ export default function ContactForm() {
 
         {/* Submit */}
 
-        <button
-          type="submit"
-          className="w-full rounded-xl bg-gradient-to-r from-[#F53D7B] via-[#C44DFF] to-[#18B8F2] px-8 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 hover:scale-[1.02] hover:shadow-xl"
-        >
+          {successMessage && (
+            <div className="rounded-xl border border-cyan-200 bg-cyan-50 p-4 text-cyan-700">
+              <p className="font-semibold text-slate-900">
+                Consultation Request Received!
+              </p>
+
+              <p className="mt-1 text-slate-600">
+                Thank you for contacting Sociable Travels. We'll review your request and reach out shortly.
+              </p>            
+          </div>
+          )}
+
+          {errorMessage && (
+            <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-red-700">
+              ❌ {errorMessage}
+            </div>
+          )}
+
+          <button
+            type="submit"
+            className="w-full rounded-xl bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.02]"
+          >
             Request My Free Consultation
-       </button>
+          </button>
       </form>
     </section>
   );

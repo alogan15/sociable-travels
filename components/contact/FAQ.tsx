@@ -85,7 +85,7 @@ export default function FAQ() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-3xl bg-gradient-to-r from-[#F53D7B] via-[#C44DFF] to-[#18B8F2] p-10 text-center text-white">
+        <div className="mt-16 rounded-3xl bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] p-10 text-center text-white">
           <h3 className="text-3xl font-bold">
             Still Have Questions?
           </h3>
