@@ -10,6 +10,9 @@ type ContactFormData = {
   destination: string;
   travelDates: string;
   travelers: string;
+  budget: string;
+  tripType: string;
+  preferredContact: string;
   message: string;
 };
 
@@ -21,6 +24,9 @@ const initialFormData: ContactFormData = {
   destination: "",
   travelDates: "",
   travelers: "",
+  budget: "",
+  tripType: "",
+  preferredContact: "",
   message: "",
 };
 
@@ -263,6 +269,85 @@ export default function ContactForm() {
             <option value="10+">10+ Travelers</option>
           </select>
         </div>
+
+
+
+        {/* Budget */}
+
+          <div>
+            <label
+              htmlFor="budget"
+              className="mb-2 block font-medium text-slate-700"
+            >
+              Estimated Budget
+            </label>
+
+            <select
+              id="budget"
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200"
+            >
+              <option value="">Select Budget</option>
+              <option value="Under $2,000">Under $2,000</option>
+              <option value="$2,000 - $5,000">$2,000 - $5,000</option>
+              <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+              <option value="$10,000+">$10,000+</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              htmlFor="tripType"
+              className="mb-2 block font-medium text-slate-700"
+            >
+              What type of trip are you planning?
+            </label>
+
+            <select
+              id="tripType"
+              name="tripType"
+              value={formData.tripType}
+              onChange={handleChange}
+              className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 transition focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200"
+            >
+              <option value="">Select Trip Type</option>
+              <option value="Family Vacation">Family Vacation</option>
+              <option value="Couples Getaway">Couples Getaway</option>
+              <option value="Group Trip">Group Trip</option>
+              <option value="Cruise">Cruise</option>
+              <option value="Honeymoon">Honeymoon</option>
+              <option value="Birthday Celebration">Birthday Celebration</option>
+              <option value="Corporate Travel">Corporate Travel</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="mb-3 block font-medium text-slate-700">
+              Preferred Contact Method
+            </label>
+
+            <div className="flex flex-wrap gap-6">
+              {["Email", "Phone", "Text"].map((method) => (
+                <label
+                  key={method}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="preferredContact"
+                    value={method}
+                    checked={formData.preferredContact === method}
+                    onChange={handleChange}
+                  />
+
+                  <span>{method}</span>
+                </label>
+              ))}
+            </div>
+          </div>
 
         {/* Message */}
 

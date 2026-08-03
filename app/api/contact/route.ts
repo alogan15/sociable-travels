@@ -13,6 +13,9 @@ export async function POST(request: Request) {
       destination,
       travelDates,
       travelers,
+      budget,
+      tripType,
+      preferredContact,
       message,
     } = body;
 
@@ -39,6 +42,9 @@ export async function POST(request: Request) {
         destination,
         travel_dates: travelDates,
         travelers,
+        budget,
+        trip_type: tripType,
+        preferred_contact: preferredContact,
         message,
         status: "New",
       });
