@@ -59,7 +59,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "success",
+      message: true,
     });
   } catch (error) {
     console.error("API Error:", error);

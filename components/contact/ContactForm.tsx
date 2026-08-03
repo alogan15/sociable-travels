@@ -292,7 +292,7 @@ export default function ContactForm() {
 
         {/* Submit */}
 
-          {successMessage && (
+         
             <div className="rounded-xl border border-cyan-200 bg-cyan-50 p-4 text-cyan-700">
               <p className="font-semibold text-slate-900">
                 Consultation Request Received!
@@ -302,7 +302,7 @@ export default function ContactForm() {
                 Thank you for contacting Sociable Travels. We'll review your request and reach out shortly.
               </p>            
           </div>
-          )}
+          
 
           {errorMessage && (
             <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-red-700">
