@@ -51,14 +51,14 @@ export const metadata: Metadata = {
 
     siteName: "Sociable Travels",
 
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Sociable Travels",
-      },
-    ],
+  images: [
+  {
+    url: "https://www.sociabletravels.com/og-image.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Sociable Travels",
+  },
+],
 
     locale: "en_US",
 
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     description:
       "Luxury vacations, cruises, and unforgettable travel experiences.",
 
-    images: ["/og-image.jpg"],
+  images: ["https://www.sociabletravels.com/og-image.jpg"],
   },
 
   icons: {
