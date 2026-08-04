@@ -51,10 +51,10 @@ export default function Footer() {
             <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
 
             <ul className="space-y-3 text-slate-300">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/destinations">Destinations</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/" className="transition hover:text-[var(--primary)]">Home</Link></li>
+              <li><Link href="/destinations" className="transition hover:text-[var(--primary)]">Destinations</Link></li>
+              <li><Link href="/about" className="transition hover:text-[var(--primary)]">About</Link></li>
+              <li><Link href="/contact" className="transition hover:text-[var(--primary)]">Contact</Link></li>
             </ul>
           </div>
 
@@ -63,10 +63,41 @@ export default function Footer() {
             <h3 className="mb-4 text-lg font-semibold">Vacation Types</h3>
 
             <ul className="space-y-3 text-slate-300">
-              <li>Cruises</li>
-              <li>Group Travel</li>
-              <li>Family Vacations</li>
-              <li>Romantic Getaways</li>
+                <li>
+                  <Link
+                    href="/destinations?type=cruises"
+                    className="transition hover:text-[var(--primary)]"
+                  >
+                    Cruises
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/destinations?type=group"
+                    className="transition hover:text-[var(--primary)]"
+                  >
+                    Group Travel
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/destinations?type=family"
+                    className="transition hover:text-[var(--primary)]"
+                  >
+                    Family Vacations
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/destinations?type=romantic"
+                    className="transition hover:text-[var(--primary)]"
+                  >
+                    Romantic Getaways
+                  </Link>
+                </li>
             </ul>
           </div>
 
@@ -77,12 +108,22 @@ export default function Footer() {
             <ul className="space-y-4 text-slate-300">
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-[var(--primary)]" />
-                  Sociabletravels34@gmail.com
+                      <a
+                        href="mailto:Sociabletravels34@gmail.com"
+                        className="transition hover:text-[var(--primary)]"
+                      >
+                        Sociabletravels34@gmail.com
+                      </a>
               </li>
 
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-[var(--secondary)]" />
-                (832)543-6351
+                      <a
+                        href="tel:+18325436351"
+                        className="transition hover:text-[var(--secondary)]"
+                      >
+                        (832) 543-6351
+                      </a>
               </li>
 
               <li className="flex items-center gap-3">
