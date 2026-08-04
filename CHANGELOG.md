@@ -94,7 +94,6 @@ All notable changes to the Sociable Travels project will be documented here.
 - Homepage CTA section
 - Footer improvements
 - Desktop "More" navigation dropdown
-- Improved desktop navigation structure
 - Mobile navigation drawer
 
 ## Updated
@@ -102,7 +101,6 @@ All notable changes to the Sociable Travels project will be documented here.
 - CTA messaging
 - Footer layout
 - Navigation spacing
-- Homepage consistency
 - Responsive homepage layout
 
 ---
@@ -112,23 +110,18 @@ All notable changes to the Sociable Travels project will be documented here.
 ## Added
 - Click-to-open desktop dropdown
 - Animated dropdown chevron
-- Enhanced dropdown interactions
 - Active navigation state
 
 ## Updated
 - Navbar spacing
 - Responsive logo sizing
 - Mobile header balance
-- Testimonial styling
-- How It Works visual hierarchy
 - Homepage responsive polish
-- Navigation interaction consistency
 - Desktop navigation UX
 
 ## Fixed
 - Desktop dropdown interaction
-- Mobile navigation balance
-- Navigation usability improvements
+- Mobile navigation improvements
 
 ---
 
@@ -136,64 +129,47 @@ All notable changes to the Sociable Travels project will be documented here.
 
 ## Added
 - Destinations page
-- Destinations Hero
-- Destination grid
-- Destination data model
-- Dedicated destination components
 - Services page
-- Services Hero
-- Services content sections
 - Specials page
-- Specials Hero
-- Promotional offers section
 - About page
-- Company Story section
-- Mission & Values section
-- Why Travel With Us section
-- Meet Your Travel Advisor section
 - Reviews page
-- Real client testimonials
-- Expandable ReviewCard component
 - Contact page
-- Contact Hero
-- Contact Form
-- Contact Information section
-- FAQ section integrated into Contact page
+- Shared PageHero architecture
+- Contact form
+- FAQ integration
+- Expandable ReviewCard component
 
 ## Updated
-- Established reusable page architecture
-- Reused PageHero component across pages
-- Reused CTA component across the site
-- Standardized spacing and typography
-- Improved page hierarchy
-- Improved responsive layouts
-- Updated navigation structure
+- Shared page architecture
+- Responsive layouts
+- Navigation structure
+- Typography consistency
+- Component reuse
 
 ---
 
-# v0.8.0 — User Experience & Content Polish
+# v0.8.0 — Content & User Experience
 
 ## Added
-- Real customer reviews
-- Read More / Show Less review interactions
-- Travel advisor profile section
-- Improved trust messaging throughout the site
+- Brand Manager section
+- Additional client testimonial
+- Expanded destination catalog (20+ destinations)
+- Expanded cruise itinerary offerings
+- Functional destination filters
+- Facebook & Instagram integration
 
 ## Updated
-- About page CTA (removed duplicate button)
-- Contact page user flow
-- Contact form messaging
-- Navigation cleanup
-- Responsive spacing refinements
-- Component consistency
-- Typography consistency
-- Visual hierarchy across all pages
+- About page
+- Reviews page
+- Footer
+- Destination experience
+- Contact messaging
+- Mobile responsiveness
 
 ## Changed
-- Moved FAQ into Contact page
-- Removed Gallery from navigation (reserved for future expansion)
-- Removed standalone FAQ page from navigation
-- Simplified navigation experience
+- Removed standalone FAQ page
+- Simplified navigation
+- Improved trust messaging
 
 ---
 
@@ -202,13 +178,13 @@ All notable changes to the Sociable Travels project will be documented here.
 ## Added
 - Complete responsive marketing website
 - Seven fully designed pages
-- Reusable design system
-- Responsive mobile navigation
-- Shared UI component architecture
-- Consistent branding across the site
+- Shared design system
+- Responsive navigation
+- Production deployment
+- Custom domain connection (sociabletravels.com)
 
 ## Completed
-- Home
+- Homepage
 - Destinations
 - Services
 - Specials
@@ -219,51 +195,80 @@ All notable changes to the Sociable Travels project will be documented here.
 ## Ready For
 - Client walkthrough
 - Client feedback
-- Production testing
-- Content revisions
+- Revision planning
+
+---
+
+# v1.1.0 — Backend & Lead Capture
+
+## Added
+- Supabase backend
+- Secure API route using Next.js Route Handlers
+- Production contact form
+- Inquiry database
+- Environment variable configuration
+- Vercel environment configuration
+- Live inquiry storage
+- Extended travel consultation form
+- Budget selection
+- Trip type selection
+- Preferred contact method
+- Production-ready lead capture workflow
+
+## Updated
+- Contact form experience
+- Database schema
+- Inquiry data model
+- Production deployment
+- Custom domain configuration
+
+## Fixed
+- Vercel deployment environment issues
+- Supabase API configuration
+- Contact form submission flow
+- Database schema alignment
+- Production environment variables
 
 ---
 
 # Upcoming
 
-## v1.1.0 — Client Feedback & Integrations
+## v1.2.0 — Client Feedback Sprint
 
 ### Planned
-- Contact form backend
+- Client-requested revisions
 - Email notifications (Resend)
-- Supabase integration
-- Newsletter signup integration
-- Form success & error states
-- Analytics integration
+- Newsletter integration
+- Toast notifications
 - SEO enhancements
+- Analytics
 - Image optimization
 - Accessibility improvements
-- Add Brand Manager profile to the About page
-- Expand leadership section to feature the Sociable Travels team
+- Performance optimization
 
 ---
 
-## v1.2.0 — Future Features
+## v1.3.0 — Admin Dashboard
 
 ### Planned
-- Gallery page (if requested)
-- Standalone FAQ page (if requested)
-- Blog
-- Travel guides
-- Online booking portal
-- Client dashboard
-- Destination search enhancements
+- Secure authentication
+- Admin login
+- Inquiry dashboard
+- Inquiry management
+- Inquiry status workflow
+- Search & filtering
+- Customer management
+- Booking workflow
 
 ---
 
 ## v2.0.0 — Production Launch
 
 ### Planned
-- Client approval
+- Final client approval
 - Final QA
-- Performance optimization
-- Domain configuration
-- Production deployment
-- Client handoff
+- Performance audit
+- Production optimization
 - Documentation
+- Client handoff
 - Maintenance plan
