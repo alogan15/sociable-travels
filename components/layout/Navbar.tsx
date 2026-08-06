@@ -21,10 +21,10 @@ const links = [
 ];
 
 const moreLinks = [
+  { name: "Brand Ambassador", href: "/ambassador" },
+  { name: "The Sociable Collection", href: "/collection" },
   { name: "Testimonials", href: "/reviews" },
   { name: "About", href: "/about" },
-  { name: "The Sociable Collection", href: "/collection" },
-  { name: "Brand Ambassador", href: "/ambassador" },
 ];
 
 export default function Navbar() {

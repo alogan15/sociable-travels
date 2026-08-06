@@ -114,8 +114,8 @@ export default function MobileMenu({
           </button> */}
 
         {/* Main Links */}
-          <nav className="flex flex-1 flex-col overflow-y-auto p-6">
-            <div className="space-y-1">
+    <nav className="flex min-h-0 flex-1 flex-col overflow-y-auto p-6">
+              <div className="space-y-1">
   {links.map((link) => {
     const Icon = link.icon;
     const active = pathname === link.href;
