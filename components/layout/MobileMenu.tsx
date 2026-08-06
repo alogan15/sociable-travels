@@ -76,11 +76,11 @@ export default function MobileMenu({
       />
 
       {/* Drawer */}
-      <aside
-        className={`fixed right-0 top-0 z-50 flex h-screen w-72 flex-col bg-white shadow-2xl transition-transform duration-300 ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
+<aside
+  className={`fixed right-0 top-0 z-50 h-screen w-72 overflow-y-auto bg-white shadow-2xl transition-transform duration-300 ${
+    open ? "translate-x-0" : "translate-x-full"
+  }`}
+>
         {/* Header */}
 <div className="relative border-b border-slate-200 px-8 py-6">
 
