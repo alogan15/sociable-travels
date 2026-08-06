@@ -23,9 +23,8 @@ const links = [
 const moreLinks = [
   { name: "Testimonials", href: "/reviews" },
   { name: "About", href: "/about" },
-  // { name: "About", href: "/about" },
-  // { name: "Gallery", href: "/gallery" },
-  // { name: "FAQ", href: "/faq" },
+  { name: "The Sociable Collection", href: "/collection" },
+  { name: "Brand Ambassador", href: "/ambassador" },
 ];
 
 export default function Navbar() {
