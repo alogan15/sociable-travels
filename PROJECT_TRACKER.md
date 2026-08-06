@@ -52,6 +52,15 @@
 
 # 📋 Features Backlog
 
+### Code Quality
+
+- [ ] Refactor AmbassadorForm into reusable field components before backend integration
+  - PersonalInfoFields
+  - SocialMediaFields
+  - TravelProfileFields
+  - EssayField
+  - AgreementCheckbox
+
 ## Booking & Lead Capture
 
 - [x] Contact Form Backend
