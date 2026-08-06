@@ -12,9 +12,6 @@ import {
   Tag,
   Gift,
   Sparkles,
-  Palmtree,
-  ImageIcon,
-  CircleHelp,
   Plane,
 } from "lucide-react";import Button from "../ui/Button";
 import { useEffect } from "react";
@@ -37,10 +34,9 @@ const links = [
 ];
 
 const moreLinks = [
-  { name: "Brand Ambassador", href: "/ambassador" },
-  { name: "The Sociable Collection", href: "/collection" },
-  { name: "Testimonials", href: "/reviews" },
-  { name: "About", href: "/about" },
+  { name: "Brand Ambassador", href: "/ambassador", icon: Sparkles },
+  { name: "The Sociable Collection", href: "/collection", icon: Tag },
+  { name: "About", href: "/about", icon: User },
 ];
 
 export default function MobileMenu({
