@@ -1,17 +1,15 @@
-import CollectionHero from "@/components/collection/CollectionHero";
-import FeaturedCollections from "@/components/collection/FeaturedCollections";
-import ProductGrid from "@/components/collection/ProductGrid";
-import CommunitySection from "@/components/collection/CommunitySection";
-import CollectionCTA from "@/components/collection/CollectionCTA";
+import ContactHero from "@/components/contact/ContactHero";
+import ContactForm from "@/components/contact/ContactForm";
+import ContactInfo from "@/components/contact/ContactInfo";
+import FAQ from "@/components/contact/FAQ";
 
-export default function CollectionPage() {
+export default function ContactPage() {
   return (
     <>
-      <CollectionHero />
-      <FeaturedCollections />
-      <ProductGrid />
-      <CommunitySection />
-      <CollectionCTA />
+      <ContactHero />
+      <ContactForm />
+      <ContactInfo />
+      <FAQ />
     </>
   );
 }

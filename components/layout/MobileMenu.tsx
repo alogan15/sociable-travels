@@ -29,7 +29,6 @@ const links = [
   { name: "Destinations", href: "/destinations", icon: MapPinned },
   { name: "Specials", href: "/specials", icon: Gift },
   { name: "Services", href: "/services", icon: BriefcaseBusiness },
-  { name: "Testimonials", href: "/reviews", icon: Star },
   { name: "Contact", href: "/contact", icon: Mail },
 ];
 
@@ -37,6 +36,8 @@ const moreLinks = [
   { name: "Brand Ambassador", href: "/ambassador", icon: Sparkles },
   { name: "The Sociable Collection", href: "/collection", icon: Tag },
   { name: "About", href: "/about", icon: User },
+   { name: "Testimonials", href: "/reviews", icon: Star },
+
 ];
 
 export default function MobileMenu({

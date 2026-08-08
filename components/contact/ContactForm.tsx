@@ -390,12 +390,14 @@ export default function ContactForm() {
             </div>
           )}
 
+        <div className="mt-8 flex justify-center">
           <button
             type="submit"
-            className="w-full rounded-xl bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.02]"
+                        className="w-full max-w-md rounded-xl bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.02]"
           >
             Request My Free Consultation
           </button>
+        </div>
       </form>
     </section>
   );

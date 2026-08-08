@@ -31,7 +31,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         href="/contact"
         className="mt-8 inline-flex items-center gap-2 font-semibold text-cyan-600 transition-colors duration-300 group-hover:text-cyan-700"
       >
-        Learn More
+        Plan This Trip
         <ArrowRight
           size={18}
           className="transition-transform duration-300 group-hover:translate-x-1"
