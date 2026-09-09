@@ -54,7 +54,7 @@ export const travelPackages: TravelPackage[] = [
       "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?q=80&w=1200&auto=format&fit=crop",
     description:
       "Create lifelong memories with thrilling attractions, family-friendly resorts, and endless fun.",
-    startingPrice: "$1,199",
+    startingPrice: "$799",
     duration: "5 Nights",
     badge: "Family Favorite",
   },
