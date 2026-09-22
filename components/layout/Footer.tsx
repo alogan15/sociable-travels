@@ -46,17 +46,66 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
+{/* Quick Links */}
+<div>
+  <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
 
-            <ul className="space-y-3 text-slate-300">
-              <li><Link href="/" className="transition hover:text-[var(--primary)]">Home</Link></li>
-              <li><Link href="/destinations" className="transition hover:text-[var(--primary)]">Destinations</Link></li>
-              <li><Link href="/about" className="transition hover:text-[var(--primary)]">About</Link></li>
-              <li><Link href="/contact" className="transition hover:text-[var(--primary)]">Contact</Link></li>
-            </ul>
-          </div>
+  <ul className="space-y-3 text-slate-300">
+    <li>
+      <Link
+        href="/"
+        className="transition hover:text-[var(--primary)]"
+      >
+        Home
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/destinations"
+        className="transition hover:text-[var(--primary)]"
+      >
+        Destinations
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/about"
+        className="transition hover:text-[var(--primary)]"
+      >
+        About
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/contact"
+        className="transition hover:text-[var(--primary)]"
+      >
+        Contact
+      </Link>
+    </li>
+
+    <li className="pt-2">
+      <Link
+        href="/privacy"
+        className="transition hover:text-[var(--primary)]"
+      >
+        Privacy Policy
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        href="/terms"
+        className="transition hover:text-[var(--primary)]"
+      >
+        Terms & Conditions
+      </Link>
+    </li>
+  </ul>
+</div>
 
           {/* Vacation Types */}
           <div>
@@ -141,9 +190,14 @@ export default function Footer() {
 
           <p className="mt-2">
             Designed & Developed by{" "}
-            <span className="font-medium text-white">
-              From London to Paris LLC
-            </span>
+              <a
+                href="https://www.fromlondontoparis.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-white transition hover:text-[var(--secondary)]"
+              >
+                From London to Paris LLC
+              </a>
           </p>
         </div>
       </div>

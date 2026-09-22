@@ -7,21 +7,31 @@ export interface TravelPackage {
   startingPrice: string;
   duration: string;
   badge: string;
+  dates?: string;
+  deposit?: string;
+  pricing?: string[];
 }
 
 export const travelPackages: TravelPackage[] = [
   {
     id: 1,
-    title: "Caribbean Escape",
-    location: "Jamaica",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
+    title: "5th Annual Jamaica Experience",
+    location: "RIU Reggae Jamaica",
+    image: "/images/destinations/jamaica2.jpg",
     description:
-      "Unwind on white-sand beaches with all-inclusive luxury, crystal-clear waters, and unforgettable island adventures.",
-    startingPrice: "$999",
-    duration: "5 Nights",
-    badge: "Popular",
+      "Join Sociable Travels for an unforgettable Jamaica experience featuring resort accommodations, roundtrip airport transfers, a booze cruise, souvenir shopping, premium liquor, and nightly entertainment.",
+    startingPrice: "$1,400 PP",
+    duration: "5 Days / 4 Nights",
+    badge: "Special",
+    dates: "April 22–26, 2027",
+    deposit: "$125 Deposit Due ASAP",
+    pricing: [
+      "Single: $1,800 PP",
+      "Double: $1,600 PP",
+      "Triple: $1,400 PP",
+    ],
   },
+
   {
     id: 2,
     title: "Luxury Cruise",
@@ -34,6 +44,7 @@ export const travelPackages: TravelPackage[] = [
     duration: "7 Nights",
     badge: "Best Value",
   },
+
   {
     id: 3,
     title: "Romantic Getaway",
@@ -46,6 +57,7 @@ export const travelPackages: TravelPackage[] = [
     duration: "6 Nights",
     badge: "Couples",
   },
+
   {
     id: 4,
     title: "Family Adventure",
@@ -58,6 +70,7 @@ export const travelPackages: TravelPackage[] = [
     duration: "5 Nights",
     badge: "Family Favorite",
   },
+
   {
     id: 5,
     title: "European Discovery",
@@ -70,6 +83,7 @@ export const travelPackages: TravelPackage[] = [
     duration: "8 Nights",
     badge: "New",
   },
+
   {
     id: 6,
     title: "Tropical Paradise",

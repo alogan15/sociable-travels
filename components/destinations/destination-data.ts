@@ -229,5 +229,71 @@ export const destinations: Destination[] = [
   rating: 5,
   tags: ["City", "Adventure", "Culture"],
 },
+{
+  id: 21,
+  name: "Atlanta",
+  location: "Georgia, USA",
+  image:
+    "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1200&auto=format&fit=crop",
+  description:
+    "Experience Southern hospitality, incredible food, vibrant culture, entertainment, and unforgettable city experiences.",
+  rating: 5,
+  tags: ["City", "Family", "Culture"],
+},
+{
+  id: 22,
+  name: "Houston",
+  location: "Texas, USA",
+  image:
+    "https://images.unsplash.com/photo-1521478706270-f2a3ae9f4a9d?q=80&w=1200&auto=format&fit=crop",
+  description:
+    "Discover diverse cuisine, world-class attractions, shopping, entertainment, and the energy of Space City.",
+  rating: 5,
+  tags: ["City", "Family", "Culture"],
+},
+{
+  id: 23,
+  name: "Las Vegas",
+  location: "Nevada, USA",
+  image:
+    "https://images.unsplash.com/photo-1605833556294-eaeb7a5b466b?q=80&w=1200&auto=format&fit=crop",
+  description:
+    "Enjoy world-class entertainment, luxury resorts, incredible dining, nightlife, and unforgettable experiences.",
+  rating: 5,
+  tags: ["City", "Luxury", "Romance"],
+},
+{
+  id: 24,
+  name: "Miami",
+  location: "Florida, USA",
+  image:
+    "https://images.unsplash.com/photo-1506966953602-c20cc11f75e3?q=80&w=1200&auto=format&fit=crop",
+  description:
+    "Relax on beautiful beaches while enjoying vibrant nightlife, incredible dining, shopping, and luxury.",
+  rating: 5,
+  tags: ["Beach", "Luxury", "City", "Romance"],
+},
+{
+  id: 25,
+  name: "New Orleans",
+  location: "Louisiana, USA",
+  image:
+    "https://images.unsplash.com/photo-1545231027-637d2f6210f8?q=80&w=1200&auto=format&fit=crop",
+  description:
+    "Experience unforgettable food, live music, rich history, vibrant culture, and the unique spirit of New Orleans.",
+  rating: 5,
+  tags: ["City", "Culture", "Adventure", "Romance"],
+},
+{
+  id: 26,
+  name: "Aspen",
+  location: "Colorado, USA",
+  image:
+    "https://images.unsplash.com/photo-1548777123-e216912df7d8?q=80&w=1200&auto=format&fit=crop",
+  description:
+    "Escape to breathtaking mountain scenery, luxury resorts, outdoor adventures, and unforgettable year-round experiences.",
+  rating: 5,
+  tags: ["Adventure", "Luxury", "Romance"],
+},
 
 ];
