@@ -36,6 +36,12 @@ export default function TermsPage() {
             </p>
 
             <p className="mt-4 leading-7">
+              By accessing this website or engaging Sociable Travels
+              for travel booking services, you agree to comply with
+              and be bound by these Terms & Conditions.
+            </p>
+
+            <p className="mt-4 leading-7">
               Sociable Travels acts as an intermediary and booking agent for
               independent travel suppliers and does not own, control, or
               operate the airlines, hotels, resorts, cruise lines,
@@ -223,9 +229,9 @@ export default function TermsPage() {
             </p>
 
             <p className="mt-4 leading-7">
-              Travelers should ensure that their passport is valid for at
-              least six months beyond their travel return date when required
-              by applicable destination or supplier requirements.
+              Travelers must ensure their passports are valid for at least six
+              months beyond their travel return date and meet all applicable
+              destination and supplier requirements.
             </p>
           </div>
 

@@ -48,8 +48,10 @@ export default function PrivacyPage() {
               <li>Travel preferences and special requests.</li>
               <li>Destination and itinerary information.</li>
               <li>
-                Business and application information submitted for Sociable
-                Travels programs.
+               <li>
+                Business information, travel agent licensing or host agency details,
+                and application information submitted for Sociable Travels programs.
+              </li>
               </li>
             </ul>
           </div>
@@ -72,6 +74,7 @@ export default function PrivacyPage() {
               <li>Fulfill client travel requests.</li>
               <li>Respond to questions and inquiries.</li>
               <li>Review applications for Sociable Travels programs.</li>
+              <li>Manage coaching program enrollment, billing, and related communications.</li>
               <li>Communicate program information and next steps.</li>
             </ul>
           </div>
@@ -116,6 +119,8 @@ export default function PrivacyPage() {
               <li>Tour operators and other travel vendors.</li>
               <li>Cruise lines.</li>
               <li>Insurance providers.</li>
+              <li>Payment providers, including PayPal and Zelle, when applicable.</li>
+              <li>Scheduling tools used to arrange consultations and coaching sessions.</li>
               <li>Other suppliers required to fulfill a requested booking.</li>
             </ul>
 

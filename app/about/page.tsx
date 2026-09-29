@@ -4,7 +4,8 @@ import MissionValues from "@/components/about/MissionValues";
 import MeetAdvisor from "@/components/about/MeetAdvisor";
 import WhyTravelWithUs from "@/components/about/WhyTravelWithUs";
 import CTA from "@/components/cta/CTA";
-import MeetBrandManager from "@/components/about/MeetBrandAmbassador";
+import MeetBrandManager from "@/components/about/MeetBrandManager";
+import MeetBrandAmbassador from "@/components/about/MeetBrandAmbassador";
 
 export default function AboutPage() {
   return (
@@ -35,6 +36,8 @@ export default function AboutPage() {
       <MeetAdvisor />
 
       <MeetBrandManager />
+
+      <MeetBrandAmbassador />
 
       <CTA
         eyebrow="Travel Made Personal"
