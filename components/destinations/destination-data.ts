@@ -35,8 +35,7 @@ export const destinations: Destination[] = [
     id: 3,
     name: "Cancún",
     location: "Mexico",
-    image:
-      "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/destinations/cancun.jpg",
     description:
       "Experience vibrant nightlife, beautiful beaches, and all-inclusive resorts perfect for every traveler.",
     rating: 5,
@@ -200,8 +199,7 @@ export const destinations: Destination[] = [
   id: 18,
   name: "Turks & Caicos",
   location: "Caribbean",
-  image:
-    "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200&auto=format&fit=crop",
+  image: "/images/destinations/turks-and-caicos.jpg",
   description:
     "Relax on award-winning beaches with crystal-clear waters and luxurious beachfront resorts.",
   rating: 5,
@@ -211,8 +209,7 @@ export const destinations: Destination[] = [
   id: 19,
   name: "Mediterranean Cruise",
   location: "Southern Europe",
-  image:
-    "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200&auto=format&fit=crop",
+  image: "/images/destinations/mediterranean-cruise.jpg",
   description:
     "Sail through Europe's most beautiful coastal cities while enjoying luxury accommodations and unforgettable excursions.",
   rating: 5,
@@ -233,8 +230,7 @@ export const destinations: Destination[] = [
   id: 21,
   name: "Atlanta",
   location: "Georgia, USA",
-  image:
-    "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1200&auto=format&fit=crop",
+  image: "/images/destinations/atlanta.jpg",
   description:
     "Experience Southern hospitality, incredible food, vibrant culture, entertainment, and unforgettable city experiences.",
   rating: 5,
@@ -244,8 +240,7 @@ export const destinations: Destination[] = [
   id: 22,
   name: "Houston",
   location: "Texas, USA",
-  image:
-    "https://images.unsplash.com/photo-1521478706270-f2a3ae9f4a9d?q=80&w=1200&auto=format&fit=crop",
+  image: "/images/destinations/houston.jpg",
   description:
     "Discover diverse cuisine, world-class attractions, shopping, entertainment, and the energy of Space City.",
   rating: 5,
@@ -255,8 +250,7 @@ export const destinations: Destination[] = [
   id: 23,
   name: "Las Vegas",
   location: "Nevada, USA",
-  image:
-    "https://images.unsplash.com/photo-1605833556294-eaeb7a5b466b?q=80&w=1200&auto=format&fit=crop",
+  image: "/images/destinations/las-vegas.jpg",
   description:
     "Enjoy world-class entertainment, luxury resorts, incredible dining, nightlife, and unforgettable experiences.",
   rating: 5,
@@ -277,8 +271,7 @@ export const destinations: Destination[] = [
   id: 25,
   name: "New Orleans",
   location: "Louisiana, USA",
-  image:
-    "https://images.unsplash.com/photo-1545231027-637d2f6210f8?q=80&w=1200&auto=format&fit=crop",
+  image: "/images/destinations/new-orleans.jpg",
   description:
     "Experience unforgettable food, live music, rich history, vibrant culture, and the unique spirit of New Orleans.",
   rating: 5,
@@ -288,8 +281,7 @@ export const destinations: Destination[] = [
   id: 26,
   name: "Aspen",
   location: "Colorado, USA",
-  image:
-    "https://images.unsplash.com/photo-1548777123-e216912df7d8?q=80&w=1200&auto=format&fit=crop",
+  image: "/images/destinations/aspen.jpg",
   description:
     "Escape to breathtaking mountain scenery, luxury resorts, outdoor adventures, and unforgettable year-round experiences.",
   rating: 5,

@@ -34,6 +34,7 @@ const links = [
 
 const moreLinks = [
   { name: "Brand Ambassador", href: "/ambassador", icon: Sparkles },
+  { name: "Coaching", href: "/business-builders", icon: BriefcaseBusiness },
   { name: "The Sociable Collection", href: "/collection", icon: Tag },
   { name: "About", href: "/about", icon: User },
    { name: "Testimonials", href: "/reviews", icon: Star },

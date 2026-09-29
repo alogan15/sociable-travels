@@ -4,7 +4,8 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Button from "../ui/Button";
 import Container from "./Container";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown,   BriefcaseBusiness,
+ } from "lucide-react";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
@@ -22,6 +23,7 @@ const links = [
 
 const moreLinks = [
   { name: "Brand Ambassador", href: "/ambassador" },
+  { name: "Coaching", href: "/business-builders", icon: BriefcaseBusiness },
   { name: "The Sociable Collection", href: "/collection" },
   { name: "Testimonials", href: "/reviews" },
   { name: "About", href: "/about" },
