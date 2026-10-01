@@ -16,16 +16,16 @@ export default function BusinessBuildersPage() {
             Sociable Travelers
           </p>
           <h1 className="mt-4 text-4xl font-bold md:text-6xl">
-            Business Builders
+            Coaching Application
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/90">
             Build your travel business with personalized coaching,
             practical guidance, and support designed to help you
             move forward.
           </p>
-          <p className="mt-6 text-lg font-semibold">
+          {/* <p className="mt-6 text-lg font-semibold">
             3 Months · 10 One-on-One Sessions · $800
-          </p>
+          </p> */}
         </div>
       </section>
 

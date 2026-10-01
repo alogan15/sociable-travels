@@ -119,9 +119,9 @@ export default function CoachingApplicationForm() {
     <section id="application" className="bg-slate-50 px-6 py-20">
       <div className="mx-auto max-w-4xl">
         <div className="mb-10 text-center">
-          <span className="inline-block rounded-full bg-pink-100 px-4 py-2 text-sm font-semibold text-pink-700">
-            Business Builders Application
-          </span>
+          {/* <span className="inline-block rounded-full bg-pink-100 px-4 py-2 text-sm font-semibold text-pink-700">
+            Coaching Application
+          </span> */}
 
           <h2 className="mt-5 text-3xl font-bold text-slate-900 md:text-4xl">
             Take the Next Step in Your Travel Business
@@ -129,7 +129,7 @@ export default function CoachingApplicationForm() {
 
           <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-600">
             Complete the application below to be considered for the
-            Sociable Travelers Business Builders coaching program.
+            Sociable Travelers Coaching Program.
             A free consultation is required before enrollment.
           </p>
 
@@ -140,9 +140,9 @@ export default function CoachingApplicationForm() {
             <span className="rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm">
               10 One-on-One Sessions
             </span>
-            <span className="rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm">
+            {/* <span className="rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm">
               $800 Total
-            </span>
+            </span> */}
           </div>
         </div>
 

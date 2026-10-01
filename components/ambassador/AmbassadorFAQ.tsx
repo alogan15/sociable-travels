@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Is there a cost to become an ambassador?",
     answer:
-      "No. There is no fee to apply or participate in the Sociable Travels Brand Ambassador Program.",
+      "There is no fee to apply or join the Sociable Travels Brand Ambassador Program. However, an annual membership fee is required to access exclusive rewards, travel discounts, VIP opportunities, and other ambassador benefits.",
   },
   {
     question: "How long does the application review take?",
