@@ -1,15 +1,20 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { supabase } from "@/lib/supabase/server";
 import AmbassadorStatusActions from "@/components/admin/AmbassadorStatusActions";
+import { isAuthorizedAdmin } from "@/lib/supabase/admin-auth";
 
 type PageProps = {
   params: Promise<{ id: string }>;
 };
 
-export default async function AmbassadorDetailPage({
-  params,
-}: PageProps) {
+export default async function AmbassadorDetailPage({ params }: PageProps) {
+  const authorized = await isAuthorizedAdmin();
+
+  if (!authorized) {
+    redirect("/admin/login");
+  }
+
   const { id } = await params;
 
   const { data: application, error } = await supabase
@@ -85,8 +90,7 @@ export default async function AmbassadorDetailPage({
 
           <span
             className={`w-fit rounded-full px-4 py-2 text-sm font-semibold ${
-              statusStyles[application.status] ??
-              "bg-slate-100 text-slate-600"
+              statusStyles[application.status] ?? "bg-slate-100 text-slate-600"
             }`}
           >
             {application.status}
@@ -102,25 +106,13 @@ export default async function AmbassadorDetailPage({
               </h2>
 
               <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                <InfoItem
-                  label="Email"
-                  value={application.email}
-                />
+                <InfoItem label="Email" value={application.email} />
 
-                <InfoItem
-                  label="Phone"
-                  value={application.phone}
-                />
+                <InfoItem label="Phone" value={application.phone} />
 
-                <InfoItem
-                  label="City"
-                  value={application.city}
-                />
+                <InfoItem label="City" value={application.city} />
 
-                <InfoItem
-                  label="State"
-                  value={application.state}
-                />
+                <InfoItem label="State" value={application.state} />
               </div>
             </div>
           </section>
@@ -138,30 +130,15 @@ export default async function AmbassadorDetailPage({
                   value={application.primary_platform}
                 />
 
-                <InfoItem
-                  label="Instagram"
-                  value={application.instagram}
-                />
+                <InfoItem label="Instagram" value={application.instagram} />
 
-                <InfoItem
-                  label="TikTok"
-                  value={application.tiktok}
-                />
+                <InfoItem label="TikTok" value={application.tiktok} />
 
-                <InfoItem
-                  label="Facebook"
-                  value={application.facebook}
-                />
+                <InfoItem label="Facebook" value={application.facebook} />
 
-                <InfoItem
-                  label="YouTube"
-                  value={application.youtube}
-                />
+                <InfoItem label="YouTube" value={application.youtube} />
 
-                <InfoItem
-                  label="Website"
-                  value={application.website}
-                />
+                <InfoItem label="Website" value={application.website} />
               </div>
             </div>
           </section>
@@ -253,9 +230,7 @@ export default async function AmbassadorDetailPage({
 
                 <InfoItem
                   label="Ambassador Acknowledgment"
-                  value={formatValue(
-                    application.ambassador_acknowledgment
-                  )}
+                  value={formatValue(application.ambassador_acknowledgment)}
                 />
               </div>
             </div>
@@ -280,18 +255,10 @@ export default async function AmbassadorDetailPage({
   );
 }
 
-function InfoItem({
-  label,
-  value,
-}: {
-  label: string;
-  value: string;
-}) {
+function InfoItem({ label, value }: { label: string; value: string }) {
   return (
     <div className="min-w-0">
-      <p className="text-sm font-medium text-slate-400">
-        {label}
-      </p>
+      <p className="text-sm font-medium text-slate-400">{label}</p>
 
       <p className="mt-1 whitespace-pre-wrap break-words text-base font-semibold leading-relaxed text-slate-800">
         {value || "Not provided"}

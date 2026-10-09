@@ -1,11 +1,19 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { supabase } from "@/lib/supabase/server";
+import { isAuthorizedAdmin } from "@/lib/supabase/admin-auth";
 
 export default async function AmbassadorsPage() {
+  const authorized = await isAuthorizedAdmin();
+
+  if (!authorized) {
+    redirect("/admin/login");
+  }
+
   const { data: applications, error } = await supabase
     .from("ambassador_applications")
     .select(
-      "id, first_name, last_name, email, city, state, primary_platform, travel_style, status, created_at"
+      "id, first_name, last_name, email, city, state, primary_platform, travel_style, status, created_at",
     )
     .order("created_at", { ascending: false });
 
@@ -37,10 +45,10 @@ export default async function AmbassadorsPage() {
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-12">
       <div className="mx-auto max-w-7xl">
-
         <Link
           href="/admin"
-          className="mb-8 inline-flex items-center text-sm font-semibold text-slate-600 transition hover:text-slate-900"        >
+          className="mb-8 inline-flex items-center text-sm font-semibold text-slate-600 transition hover:text-slate-900"
+        >
           ← Back to Admin Dashboard
         </Link>
 
@@ -81,7 +89,7 @@ export default async function AmbassadorsPage() {
                 className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
               >
                 <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-               {/* Applicant */}
+                  {/* Applicant */}
                   <div className="min-w-0 lg:w-[300px] lg:shrink-0">
                     <h2 className="text-xl font-bold text-slate-900">
                       {application.first_name} {application.last_name}
@@ -119,7 +127,7 @@ export default async function AmbassadorsPage() {
                     </div>
                   </div>
 
-                 {/* Action */}
+                  {/* Action */}
                   <div className="flex shrink-0 flex-col items-start gap-3 lg:items-end">
                     <span
                       className={`rounded-full px-4 py-2 text-sm font-semibold ${

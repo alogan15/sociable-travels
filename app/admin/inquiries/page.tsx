@@ -1,11 +1,19 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { supabase } from "@/lib/supabase/server";
+import { isAuthorizedAdmin } from "@/lib/supabase/admin-auth";
 
 export default async function InquiriesPage() {
+  const authorized = await isAuthorizedAdmin();
+
+  if (!authorized) {
+    redirect("/admin/login");
+  }
+
   const { data: inquiries, error } = await supabase
     .from("travel_inquiries")
     .select(
-      "id, first_name, last_name, email, destination, travel_dates, travelers, status, created_at"
+      "id, first_name, last_name, email, destination, travel_dates, travelers, status, created_at",
     )
     .order("created_at", { ascending: false });
 
@@ -35,10 +43,10 @@ export default async function InquiriesPage() {
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-12">
       <div className="mx-auto max-w-7xl">
-
         <Link
           href="/admin"
-          className="mb-8 inline-flex items-center text-sm font-semibold text-slate-600 transition hover:text-slate-900"        >
+          className="mb-8 inline-flex items-center text-sm font-semibold text-slate-600 transition hover:text-slate-900"
+        >
           ← Back to Admin Dashboard
         </Link>
 
@@ -55,8 +63,7 @@ export default async function InquiriesPage() {
               </h1>
 
               <p className="mt-2 text-slate-600">
-                Review and manage travel requests submitted through the
-                website.
+                Review and manage travel requests submitted through the website.
               </p>
             </div>
 
@@ -79,7 +86,7 @@ export default async function InquiriesPage() {
                 className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
               >
                 <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-                {/* Customer */}
+                  {/* Customer */}
                   <div className="min-w-0">
                     <h2 className="text-xl font-bold text-slate-900">
                       {inquiry.first_name} {inquiry.last_name}
@@ -123,27 +130,27 @@ export default async function InquiriesPage() {
                     </div>
                   </div>
 
-           {/* Action */}
-            <div className="flex shrink-0 flex-col items-start gap-3 lg:items-end">
-              <span
-                className={`rounded-full px-4 py-2 text-sm font-semibold ${
-                  inquiry.status === "New"
-                    ? "bg-cyan-100 text-cyan-700"
-                    : inquiry.status === "Contacted"
-                      ? "bg-emerald-100 text-emerald-700"
-                      : "bg-slate-100 text-slate-600"
-                }`}
-              >
-                {inquiry.status}
-              </span>
+                  {/* Action */}
+                  <div className="flex shrink-0 flex-col items-start gap-3 lg:items-end">
+                    <span
+                      className={`rounded-full px-4 py-2 text-sm font-semibold ${
+                        inquiry.status === "New"
+                          ? "bg-cyan-100 text-cyan-700"
+                          : inquiry.status === "Contacted"
+                            ? "bg-emerald-100 text-emerald-700"
+                            : "bg-slate-100 text-slate-600"
+                      }`}
+                    >
+                      {inquiry.status}
+                    </span>
 
-              <Link
-                href={`/admin/inquiries/${inquiry.id}`}
-                className="rounded-xl bg-slate-900 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-slate-800"
-              >
-                View Inquiry
-              </Link>
-            </div>
+                    <Link
+                      href={`/admin/inquiries/${inquiry.id}`}
+                      className="rounded-xl bg-slate-900 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-slate-800"
+                    >
+                      View Inquiry
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))
@@ -154,8 +161,8 @@ export default async function InquiriesPage() {
               </h2>
 
               <p className="mt-2 text-slate-500">
-                New travel inquiries submitted through the website will
-                appear here.
+                New travel inquiries submitted through the website will appear
+                here.
               </p>
             </div>
           )}

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase/server";
+import { isAuthorizedAdmin } from "@/lib/supabase/admin-auth";
 
 const allowedStatuses = ["New", "Contacted", "Approved", "Closed"];
 
@@ -8,6 +9,16 @@ export async function PATCH(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    // Verify the signed-in user is an approved admin.
+    const authorized = await isAuthorizedAdmin();
+
+    if (!authorized) {
+      return NextResponse.json(
+        { error: "Unauthorized" },
+        { status: 401 }
+      );
+    }
+
     const { id } = await params;
     const body = await request.json();
     const { status } = body;

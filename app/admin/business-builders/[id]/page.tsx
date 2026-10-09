@@ -1,15 +1,20 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { supabase } from "@/lib/supabase/server";
 import BusinessBuilderStatusActions from "@/components/admin/BusinessBuilderStatusActions";
+import { isAuthorizedAdmin } from "@/lib/supabase/admin-auth";
 
 type PageProps = {
   params: Promise<{ id: string }>;
 };
 
-export default async function BusinessBuilderDetailPage({
-  params,
-}: PageProps) {
+export default async function BusinessBuilderDetailPage({ params }: PageProps) {
+  const isAdmin = await isAuthorizedAdmin();
+
+  if (!isAdmin) {
+    redirect("/admin");
+  }
+
   const { id } = await params;
 
   const { data: application, error } = await supabase
@@ -19,10 +24,7 @@ export default async function BusinessBuilderDetailPage({
     .single();
 
   if (error || !application) {
-    console.error(
-      "Error loading Business Builders application:",
-      error
-    );
+    console.error("Error loading Business Builders application:", error);
     notFound();
   }
 
@@ -88,8 +90,7 @@ export default async function BusinessBuilderDetailPage({
 
           <span
             className={`w-fit rounded-full px-4 py-2 text-sm font-semibold ${
-              statusStyles[application.status] ??
-              "bg-slate-100 text-slate-600"
+              statusStyles[application.status] ?? "bg-slate-100 text-slate-600"
             }`}
           >
             {application.status}
@@ -105,30 +106,18 @@ export default async function BusinessBuilderDetailPage({
               </h2>
 
               <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <InfoItem
-                  label="Full Name"
-                  value={application.full_name}
-                />
+                <InfoItem label="Full Name" value={application.full_name} />
 
                 <InfoItem
                   label="Business Name"
                   value={application.business_name}
                 />
 
-                <InfoItem
-                  label="Email"
-                  value={application.email}
-                />
+                <InfoItem label="Email" value={application.email} />
 
-                <InfoItem
-                  label="Phone"
-                  value={application.phone}
-                />
+                <InfoItem label="Phone" value={application.phone} />
 
-                <InfoItem
-                  label="State"
-                  value={application.state}
-                />
+                <InfoItem label="State" value={application.state} />
               </div>
             </div>
           </section>
@@ -146,20 +135,11 @@ export default async function BusinessBuilderDetailPage({
                   value={application.license_or_host}
                 />
 
-                <InfoItem
-                  label="Experience"
-                  value={application.experience}
-                />
+                <InfoItem label="Experience" value={application.experience} />
 
-                <InfoItem
-                  label="Niche"
-                  value={application.niche}
-                />
+                <InfoItem label="Niche" value={application.niche} />
 
-                <InfoItem
-                  label="Agency Type"
-                  value={application.agency_type}
-                />
+                <InfoItem label="Agency Type" value={application.agency_type} />
 
                 <InfoItem
                   label="Primary Goal"
@@ -182,15 +162,9 @@ export default async function BusinessBuilderDetailPage({
                   value={formatValue(application.support_needs)}
                 />
 
-                <InfoItem
-                  label="Why Now"
-                  value={application.why_now}
-                />
+                <InfoItem label="Why Now" value={application.why_now} />
 
-                <InfoItem
-                  label="Commitment"
-                  value={application.commitment}
-                />
+                <InfoItem label="Commitment" value={application.commitment} />
               </div>
             </div>
           </section>
@@ -217,36 +191,28 @@ export default async function BusinessBuilderDetailPage({
           </section>
 
           {/* Status */}
-            <section className="rounded-3xl border border-slate-200 bg-white shadow-sm">
+          <section className="rounded-3xl border border-slate-200 bg-white shadow-sm">
             <div className="px-12 py-10">
-                <h2 className="text-2xl font-bold text-slate-900">
+              <h2 className="text-2xl font-bold text-slate-900">
                 Application Status
-                </h2>
+              </h2>
 
-                <BusinessBuilderStatusActions
+              <BusinessBuilderStatusActions
                 applicationId={application.id}
                 currentStatus={application.status}
-                />
+              />
             </div>
-            </section>
+          </section>
         </div>
       </div>
     </main>
   );
 }
 
-function InfoItem({
-  label,
-  value,
-}: {
-  label: string;
-  value: string;
-}) {
+function InfoItem({ label, value }: { label: string; value: string }) {
   return (
     <div className="min-w-0">
-      <p className="text-sm font-medium text-slate-400">
-        {label}
-      </p>
+      <p className="text-sm font-medium text-slate-400">{label}</p>
 
       <p className="mt-1 whitespace-pre-wrap break-words text-base font-semibold leading-relaxed text-slate-800">
         {value || "Not provided"}

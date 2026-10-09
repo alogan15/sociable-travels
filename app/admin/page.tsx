@@ -1,23 +1,26 @@
 import Link from "next/link";
 import { supabase } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
+import { isAuthorizedAdmin } from "@/lib/supabase/admin-auth";
+import LogoutButton from "@/components/admin/LogoutButton";
 
 export default async function AdminPage() {
+  const authorized = await isAuthorizedAdmin();
+
+  if (!authorized) {
+    redirect("/admin/login");
+  }
+
   const [
     { data: inquiries, error: inquiriesError },
     { data: ambassadors, error: ambassadorsError },
     { data: businessBuilders, error: businessBuildersError },
   ] = await Promise.all([
-    supabase
-      .from("travel_inquiries")
-      .select("id, status"),
+    supabase.from("travel_inquiries").select("id, status"),
 
-    supabase
-      .from("ambassador_applications")
-      .select("id, status"),
+    supabase.from("ambassador_applications").select("id, status"),
 
-    supabase
-      .from("coaching_applications")
-      .select("id, status"),
+    supabase.from("coaching_applications").select("id, status"),
   ]);
 
   if (inquiriesError || ambassadorsError || businessBuildersError) {
@@ -60,19 +63,23 @@ export default async function AdminPage() {
     <main className="min-h-screen bg-slate-50 px-6 py-12">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-[#39D5E8]">
-            Sociable Travels
-          </p>
+        <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#39D5E8]">
+              Sociable Travels
+            </p>
 
-          <h1 className="mt-2 text-4xl font-bold text-slate-900">
-            Admin Dashboard
-          </h1>
+            <h1 className="mt-2 text-4xl font-bold text-slate-900">
+              Admin Dashboard
+            </h1>
 
-          <p className="mt-3 max-w-2xl text-slate-600">
-            Manage Travel Inquiries, Ambassador Applications, and Business
-            Builders Applications from one place.
-          </p>
+            <p className="mt-3 max-w-2xl text-slate-600">
+              Manage Travel Inquiries, Ambassador Applications, and Business
+              Builders Applications from one place.
+            </p>
+          </div>
+
+          <LogoutButton />
         </div>
 
         {/* Dashboard Cards */}
@@ -138,9 +145,7 @@ function DashboardCard({
         {eyebrow}
       </p>
 
-      <h2 className="mt-3 text-2xl font-bold text-slate-900">
-        {title}
-      </h2>
+      <h2 className="mt-3 text-2xl font-bold text-slate-900">{title}</h2>
 
       <p className="mt-3 min-h-[72px] leading-6 text-slate-600">
         {description}
@@ -152,9 +157,7 @@ function DashboardCard({
             Total
           </p>
 
-          <p className="mt-1 text-3xl font-bold text-slate-900">
-            {total}
-          </p>
+          <p className="mt-1 text-3xl font-bold text-slate-900">{total}</p>
         </div>
 
         <div className="text-right">
@@ -162,9 +165,7 @@ function DashboardCard({
             New
           </p>
 
-          <p className="mt-1 text-3xl font-bold text-slate-900">
-            {newCount}
-          </p>
+          <p className="mt-1 text-3xl font-bold text-slate-900">{newCount}</p>
         </div>
       </div>
 

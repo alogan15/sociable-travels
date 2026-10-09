@@ -1,18 +1,26 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { supabase } from "@/lib/supabase/server";
 import InquiryStatusActions from "@/components/admin/InquiryStatusActions";
+import { isAuthorizedAdmin } from "@/lib/supabase/admin-auth";
 
 export default async function InquiryDetailPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
+  const authorized = await isAuthorizedAdmin();
+
+  if (!authorized) {
+    redirect("/admin/login");
+  }
+
   const { id } = await params;
 
   const { data: inquiry, error } = await supabase
     .from("travel_inquiries")
     .select(
-      "id, first_name, last_name, email, phone, destination, travel_dates, travelers, budget, trip_type, preferred_contact, message, status, created_at"
+      "id, first_name, last_name, email, phone, destination, travel_dates, travelers, budget, trip_type, preferred_contact, message, status, created_at",
     )
     .eq("id", id)
     .single();
@@ -44,13 +52,10 @@ export default async function InquiryDetailPage({
     );
   }
 
-  const submittedDate = new Date(inquiry.created_at).toLocaleString(
-    "en-US",
-    {
-      dateStyle: "medium",
-      timeStyle: "short",
-    }
-  );
+  const submittedDate = new Date(inquiry.created_at).toLocaleString("en-US", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  });
 
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-12">
@@ -74,9 +79,7 @@ export default async function InquiryDetailPage({
               {inquiry.first_name} {inquiry.last_name}
             </h1>
 
-            <p className="mt-2 text-slate-500">
-              Submitted {submittedDate}
-            </p>
+            <p className="mt-2 text-slate-500">Submitted {submittedDate}</p>
           </div>
 
           <span
@@ -102,9 +105,7 @@ export default async function InquiryDetailPage({
 
               <div className="mt-8 grid gap-8 md:grid-cols-3">
                 <div className="min-w-0">
-                  <p className="text-sm text-slate-400">
-                    Email
-                  </p>
+                  <p className="text-sm text-slate-400">Email</p>
 
                   <p className="mt-1 break-words font-semibold text-slate-800">
                     {inquiry.email}
@@ -112,9 +113,7 @@ export default async function InquiryDetailPage({
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-sm text-slate-400">
-                    Phone
-                  </p>
+                  <p className="text-sm text-slate-400">Phone</p>
 
                   <p className="mt-1 break-words font-semibold text-slate-800">
                     {inquiry.phone || "Not provided"}
@@ -122,9 +121,7 @@ export default async function InquiryDetailPage({
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-sm text-slate-400">
-                    Preferred Contact
-                  </p>
+                  <p className="text-sm text-slate-400">Preferred Contact</p>
 
                   <p className="mt-1 break-words font-semibold text-slate-800">
                     {inquiry.preferred_contact || "Not provided"}
@@ -137,15 +134,11 @@ export default async function InquiryDetailPage({
           {/* Trip Details */}
           <section className="rounded-3xl border border-slate-200 bg-white shadow-sm">
             <div className="px-12 py-10">
-              <h2 className="text-xl font-bold text-slate-900">
-                Trip Details
-              </h2>
+              <h2 className="text-xl font-bold text-slate-900">Trip Details</h2>
 
               <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                 <div className="min-w-0">
-                  <p className="text-sm text-slate-400">
-                    Destination
-                  </p>
+                  <p className="text-sm text-slate-400">Destination</p>
 
                   <p className="mt-1 break-words font-semibold text-slate-800">
                     {inquiry.destination || "Not provided"}
@@ -153,9 +146,7 @@ export default async function InquiryDetailPage({
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-sm text-slate-400">
-                    Travel Dates
-                  </p>
+                  <p className="text-sm text-slate-400">Travel Dates</p>
 
                   <p className="mt-1 break-words font-semibold text-slate-800">
                     {inquiry.travel_dates || "Not provided"}
@@ -163,9 +154,7 @@ export default async function InquiryDetailPage({
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-sm text-slate-400">
-                    Travelers
-                  </p>
+                  <p className="text-sm text-slate-400">Travelers</p>
 
                   <p className="mt-1 break-words font-semibold text-slate-800">
                     {inquiry.travelers || "Not provided"}
@@ -173,9 +162,7 @@ export default async function InquiryDetailPage({
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-sm text-slate-400">
-                    Trip Type
-                  </p>
+                  <p className="text-sm text-slate-400">Trip Type</p>
 
                   <p className="mt-1 break-words font-semibold text-slate-800">
                     {inquiry.trip_type || "Not provided"}
@@ -184,9 +171,7 @@ export default async function InquiryDetailPage({
               </div>
 
               <div className="mt-8">
-                <p className="text-sm text-slate-400">
-                  Estimated Budget
-                </p>
+                <p className="text-sm text-slate-400">Estimated Budget</p>
 
                 <p className="mt-1 font-semibold text-slate-800">
                   {inquiry.budget || "Not provided"}
@@ -210,16 +195,16 @@ export default async function InquiryDetailPage({
 
           {/* Actions */}
           <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-           <div className="px-4 sm:px-0">
-            <h2 className="text-xl font-bold text-slate-900">
-              Inquiry Status
-            </h2>
+            <div className="px-4 sm:px-0">
+              <h2 className="text-xl font-bold text-slate-900">
+                Inquiry Status
+              </h2>
 
-            <InquiryStatusActions
-              inquiryId={inquiry.id}
-              currentStatus={inquiry.status}
-            />
-          </div>
+              <InquiryStatusActions
+                inquiryId={inquiry.id}
+                currentStatus={inquiry.status}
+              />
+            </div>
           </section>
         </div>
       </div>

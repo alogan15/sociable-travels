@@ -1,11 +1,19 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { supabase } from "@/lib/supabase/server";
+import { isAuthorizedAdmin } from "@/lib/supabase/admin-auth";
 
 export default async function BusinessBuildersPage() {
+  const isAdmin = await isAuthorizedAdmin();
+
+  if (!isAdmin) {
+    redirect("/admin");
+  }
+
   const { data: applications, error } = await supabase
     .from("coaching_applications")
     .select(
-      "id, full_name, business_name, email, state, license_or_host, niche, primary_goal, status, created_at"
+      "id, full_name, business_name, email, state, license_or_host, niche, primary_goal, status, created_at",
     )
     .order("created_at", { ascending: false });
 
@@ -30,9 +38,8 @@ export default async function BusinessBuildersPage() {
   }
 
   const newApplicationCount =
-    applications?.filter(
-      (application) => application.status === "New"
-    ).length ?? 0;
+    applications?.filter((application) => application.status === "New")
+      .length ?? 0;
 
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-12">
@@ -57,8 +64,7 @@ export default async function BusinessBuildersPage() {
             </h1>
 
             <p className="mt-3 text-slate-600">
-              Review Business Builders applications and manage applicant
-              status.
+              Review Business Builders applications and manage applicant status.
             </p>
           </div>
 
@@ -156,12 +162,12 @@ export default async function BusinessBuildersPage() {
                       {application.status}
                     </span>
 
-                 <Link
-                  href={`/admin/business-builders/${application.id}`}
-                  className="rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
-                >
-                  View Application
-                </Link>
+                    <Link
+                      href={`/admin/business-builders/${application.id}`}
+                      className="rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+                    >
+                      View Application
+                    </Link>
                   </div>
                 </div>
               </div>
