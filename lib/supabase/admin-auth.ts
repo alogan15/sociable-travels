@@ -39,5 +39,14 @@ export async function isAuthorizedAdmin(): Promise<boolean> {
     .map((email) => email.trim().toLowerCase())
     .filter(Boolean);
 
-  return allowedEmails.includes(user.email.toLowerCase());
+
+const isAllowed = allowedEmails.includes(user.email.toLowerCase());
+
+console.log("[Admin Page Auth Debug]", {
+  email: user.email,
+  isAllowed,
+  allowedEmailCount: allowedEmails.length,
+});
+
+return isAllowed;
 }
