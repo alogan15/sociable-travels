@@ -1,18 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { createClient } from "@/lib/supabase/client";
 
 export default function AdminLoginPage() {
   const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  async function handleLogin(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
     setLoading(true);
@@ -20,13 +21,14 @@ export default function AdminLoginPage() {
     try {
       const supabase = createClient();
 
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      });
+      const { error: signInError } =
+        await supabase.auth.signInWithPassword({
+          email: email.trim(),
+          password,
+        });
 
-      if (error) {
-        setError("Invalid email or password. Please try again.");
+      if (signInError) {
+        setError("Sign-in failed. Check your email and password.");
         return;
       }
 
@@ -46,13 +48,15 @@ export default function AdminLoginPage() {
           Sociable Travels
         </p>
 
-        <h1 className="mt-3 text-3xl font-bold text-slate-900">Admin Login</h1>
+        <h1 className="mt-3 text-3xl font-bold text-slate-900">
+          Admin Login
+        </h1>
 
         <p className="mt-2 text-slate-600">
           Sign in to manage travel inquiries and applications.
         </p>
 
-        <form onSubmit={handleLogin} className="mt-8 space-y-5">
+        <form onSubmit={handleSubmit} className="mt-8 space-y-5">
           <div>
             <label
               htmlFor="email"
@@ -108,23 +112,14 @@ export default function AdminLoginPage() {
           </button>
         </form>
 
-            
-        <div className="mt-6 flex items-center justify-between gap-4">
+        <div className="mt-6">
           <Link
             href="/"
             className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
           >
             ← Back to website
           </Link>
-
-          <Link
-            href="/admin/forgot-password"
-            className="text-sm font-medium text-cyan-600 transition hover:text-cyan-700"
-          >
-            Forgot password?
-          </Link>
         </div>
-
       </div>
     </main>
   );

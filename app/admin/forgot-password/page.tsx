@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -20,22 +19,21 @@ export default function ForgotPasswordPage() {
     try {
       const supabase = createClient();
 
-      const { error } = await supabase.auth.resetPasswordForEmail(
-        email.trim(),
-        {
+      const { error: resetError } =
+        await supabase.auth.resetPasswordForEmail(email.trim(), {
           redirectTo: `${window.location.origin}/admin/reset-password`,
-        }
-      );
+        });
 
-      if (error) {
-        setError(error.message);
-      } else {
-        setMessage(
-          "If an account exists for that email, a password-reset link will be sent. Check your inbox and spam folder."
-        );
+      if (resetError) {
+        setError("Unable to request a reset email right now. Please try again later.");
+        return;
       }
+
+      setMessage(
+        "If an account exists for that email, you'll receive a password-reset link shortly. Check your inbox and spam folder."
+      );
     } catch {
-      setError("Something went wrong. Please try again.");
+      setError("Something went wrong. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -53,7 +51,7 @@ export default function ForgotPasswordPage() {
         </h1>
 
         <p className="mt-2 text-slate-600">
-          Enter your admin email address and we&apos;ll send you a link to reset
+          Enter your admin email address and we'll send instructions to reset
           your password.
         </p>
 
@@ -69,7 +67,7 @@ export default function ForgotPasswordPage() {
             <input
               id="email"
               type="email"
-              autoComplete="email"
+              autoComplete="username"
               required
               value={email}
               onChange={(event) => setEmail(event.target.value)}
@@ -78,15 +76,18 @@ export default function ForgotPasswordPage() {
             />
           </div>
 
-          {error && (
-            <p role="alert" className="text-sm font-medium text-red-600">
-              {error}
+          {message && (
+            <p
+              role="status"
+              className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800"
+            >
+              {message}
             </p>
           )}
 
-          {message && (
-            <p role="status" className="text-sm text-emerald-700">
-              {message}
+          {error && (
+            <p role="alert" className="text-sm font-medium text-red-600">
+              {error}
             </p>
           )}
 
@@ -99,12 +100,14 @@ export default function ForgotPasswordPage() {
           </button>
         </form>
 
-        <Link
-          href="/admin/login"
-          className="mt-6 inline-block text-sm font-medium text-slate-500 transition hover:text-slate-900"
-        >
-          ← Back to Admin Login
-        </Link>
+        <div className="mt-6">
+          <Link
+            href="/admin/login"
+            className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
+          >
+            ← Back to Admin Login
+          </Link>
+        </div>
       </div>
     </main>
   );

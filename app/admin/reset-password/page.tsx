@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -23,7 +22,7 @@ export default function ResetPasswordPage() {
     }
 
     if (password !== confirmPassword) {
-      setError("The passwords do not match.");
+      setError("Your passwords do not match.");
       return;
     }
 
@@ -32,22 +31,24 @@ export default function ResetPasswordPage() {
     try {
       const supabase = createClient();
 
-      const { error } = await supabase.auth.updateUser({
+      const { error: updateError } = await supabase.auth.updateUser({
         password,
       });
 
-      if (error) {
-        setError(error.message);
+      if (updateError) {
+        setError(
+          "Unable to reset your password. The recovery link may have expired. Request a new one and try again."
+        );
         return;
       }
 
       setMessage(
-        "Your password has been updated. You can now sign in with your new password."
+        "Your password has been updated successfully. You can now sign in with your new password."
       );
       setPassword("");
       setConfirmPassword("");
     } catch {
-      setError("Something went wrong. Please try again.");
+      setError("Something went wrong. Please request a new reset link and try again.");
     } finally {
       setLoading(false);
     }
@@ -65,7 +66,7 @@ export default function ResetPasswordPage() {
         </h1>
 
         <p className="mt-2 text-slate-600">
-          Enter your new password below.
+          Choose a new password for your admin account.
         </p>
 
         <form onSubmit={handleSubmit} className="mt-8 space-y-5">
@@ -107,19 +108,25 @@ export default function ResetPasswordPage() {
               value={confirmPassword}
               onChange={(event) => setConfirmPassword(event.target.value)}
               className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100"
-              placeholder="Re-enter your new password"
+              placeholder="Enter your new password again"
             />
           </div>
 
-          {error && (
-            <p role="alert" className="text-sm font-medium text-red-600">
-              {error}
+          {message && (
+            <p
+              role="status"
+              className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800"
+            >
+              {message}
             </p>
           )}
 
-          {message && (
-            <p role="status" className="text-sm text-emerald-700">
-              {message}
+          {error && (
+            <p
+              role="alert"
+              className="rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm text-red-700"
+            >
+              {error}
             </p>
           )}
 
@@ -128,18 +135,18 @@ export default function ResetPasswordPage() {
             disabled={loading}
             className="w-full rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {loading ? "Updating..." : "Update Password"}
+            {loading ? "Updating password..." : "Update Password"}
           </button>
         </form>
 
-        {message && (
+        <div className="mt-6">
           <Link
             href="/admin/login"
-            className="mt-6 inline-block text-sm font-medium text-cyan-700 hover:text-cyan-800"
+            className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
           >
-            Go to Admin Login
+            ← Back to Admin Login
           </Link>
-        )}
+        </div>
       </div>
     </main>
   );

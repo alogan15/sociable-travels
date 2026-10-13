@@ -34,19 +34,10 @@ export async function isAuthorizedAdmin(): Promise<boolean> {
     return false;
   }
 
-  const allowedEmails = (process.env.ADMIN_EMAILS ?? "")
-    .split(",")
-    .map((email) => email.trim().toLowerCase())
-    .filter(Boolean);
+const allowedEmails = (process.env.ADMIN_EMAILS ?? "")
+  .split(",")
+  .map((email) => email.trim().toLowerCase())
+  .filter(Boolean);
 
-
-const isAllowed = allowedEmails.includes(user.email.toLowerCase());
-
-console.log("[Admin Page Auth Debug]", {
-  email: user.email,
-  isAllowed,
-  allowedEmailCount: allowedEmails.length,
-});
-
-return isAllowed;
+return allowedEmails.includes(user.email.toLowerCase());
 }

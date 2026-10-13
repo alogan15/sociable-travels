@@ -40,12 +40,6 @@ export async function updateSession(request: NextRequest) {
   error,
 } = await supabase.auth.getUser();
 
-console.log("[Admin Auth Debug]", {
-  pathname: request.nextUrl.pathname,
-  hasUser: Boolean(user),
-  email: user?.email ?? null,
-  authError: error?.message ?? null,
-});
 
 const pathname = request.nextUrl.pathname;
 
