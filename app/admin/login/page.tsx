@@ -108,12 +108,23 @@ export default function AdminLoginPage() {
           </button>
         </form>
 
-        <Link
-          href="/"
-          className="mt-6 inline-block text-sm font-medium text-slate-500 transition hover:text-slate-900"
-        >
-          ← Back to website
-        </Link>
+            
+        <div className="mt-6 flex items-center justify-between gap-4">
+          <Link
+            href="/"
+            className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
+          >
+            ← Back to website
+          </Link>
+
+          <Link
+            href="/admin/forgot-password"
+            className="text-sm font-medium text-cyan-600 transition hover:text-cyan-700"
+          >
+            Forgot password?
+          </Link>
+        </div>
+
       </div>
     </main>
   );

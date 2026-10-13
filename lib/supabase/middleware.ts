@@ -35,8 +35,12 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const pathname = request.nextUrl.pathname;
-  const isLoginPage = pathname === "/admin/login";
+const pathname = request.nextUrl.pathname;
+
+const isPublicAuthPage =
+  pathname === "/admin/login" ||
+  pathname === "/admin/forgot-password" ||
+  pathname === "/admin/reset-password";
 
   const allowedEmails = (process.env.ADMIN_EMAILS ?? "")
     .split(",")
@@ -47,18 +51,10 @@ export async function updateSession(request: NextRequest) {
     !!user?.email &&
     allowedEmails.includes(user.email.toLowerCase());
 
-  // Allow the login page to load for everyone.
-  if (isLoginPage) {
-    if (isAdmin) {
-      const dashboardUrl = request.nextUrl.clone();
-      dashboardUrl.pathname = "/admin";
-      dashboardUrl.search = "";
-
-      return NextResponse.redirect(dashboardUrl);
-    }
-
-    return supabaseResponse;
-  }
+// Allow authentication and password-recovery pages to load.
+if (isPublicAuthPage) {
+  return supabaseResponse;
+}
 
   // Only approved admins may access admin pages.
   if (!isAdmin) {
