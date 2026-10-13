@@ -104,6 +104,14 @@ export default function Footer() {
         Terms & Conditions
       </Link>
     </li>
+    <li>
+      <Link
+        href="/admin/login"
+        className="transition hover:text-[var(--primary)]"
+      >
+        Admin Login
+      </Link>
+    </li>
   </ul>
 </div>
 
