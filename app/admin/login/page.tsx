@@ -32,8 +32,10 @@ export default function AdminLoginPage() {
         return;
       }
 
-      router.replace("/admin");
-      router.refresh();
+      // router.replace("/admin");
+      // router.refresh();
+
+      router.push("/admin");
     } catch {
       setError("Something went wrong. Please try again.");
     } finally {
