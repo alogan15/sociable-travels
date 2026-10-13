@@ -31,9 +31,21 @@ export async function updateSession(request: NextRequest) {
     }
   );
 
+  // const {
+  //   data: { user },
+  // } = await supabase.auth.getUser();
+
   const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  data: { user },
+  error,
+} = await supabase.auth.getUser();
+
+console.log("[Admin Auth Debug]", {
+  pathname: request.nextUrl.pathname,
+  hasUser: Boolean(user),
+  email: user?.email ?? null,
+  authError: error?.message ?? null,
+});
 
 const pathname = request.nextUrl.pathname;
 
